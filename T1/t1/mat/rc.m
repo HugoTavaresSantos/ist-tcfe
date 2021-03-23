@@ -25,7 +25,7 @@ G6=1/R6
 G7=1/R7
 
 %%MESH ANALYSIS
-
+%counterclockwise currents
 
  A=[0,0,0,1;R1+R3+R4,-R3,-R4,0;-R4,0,R4+R6+R7-Kc,0;-R3*Kb,R3*Kb-1,0,0]
  B=[Id;-Va;0;0]
