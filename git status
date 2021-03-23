@@ -1,0 +1,54 @@
+[33mcommit 868aa1cdd331449ed7ea51f438c59b090b0f3226[m
+Author: Jose T. de Sousa <jose.t.de.sousa@gmail.com>
+Date:   Wed Mar 17 19:11:16 2021 +0000
+
+    minor fixes
+
+[33mcommit 5f08ac511ecb548b023fef14ebf1d7d57651c169[m
+Author: Jose T. de Sousa <jose.t.de.sousa@gmail.com>
+Date:   Sun Mar 14 23:54:48 2021 +0000
+
+    reorg using makefile tree
+
+[33mcommit f8ed32da880ec459fd4cb2778c493b0f69134945[m
+Author: Jose T. de Sousa <jose.t.de.sousa@gmail.com>
+Date:   Sun Mar 14 11:31:32 2021 +0000
+
+    delete gitignore
+
+[33mcommit f508eb922318cd577030a074d0f02e9ce1ff3257[m
+Merge: ee5175e fdc6597
+Author: Jose T. de Sousa <jose.t.de.sousa@gmail.com>
+Date:   Sat Mar 6 18:21:33 2021 +0000
+
+    Merge branch 'master' of github.com:jjts/ist-tcfe
+
+[33mcommit ee5175ee256d3bbc8074e3337da9f88e4c18d360[m
+Author: Jose T. de Sousa <jose.t.de.sousa@gmail.com>
+Date:   Sat Mar 6 18:21:11 2021 +0000
+
+    add first lab assignment
+
+[33mcommit fdc659720faba775070884950d0ad82810ca792b[m
+Author: Jose T. de Sousa <jose.t.de.sousa@gmail.com>
+Date:   Wed Mar 3 17:33:03 2021 +0000
+
+    Update README.md
+
+[33mcommit 76e8cbe93ec12c50ad9188a7d6803e29fb3ec5be[m
+Author: Jose T. de Sousa <jose.t.de.sousa@gmail.com>
+Date:   Tue Feb 23 19:40:53 2021 +0000
+
+    fix typos and stuff
+
+[33mcommit dc7e87aa963f0d863d2f7659811470e13fd202eb[m
+Author: Jose T. de Sousa <jose.t.de.sousa@gmail.com>
+Date:   Tue Feb 23 14:05:29 2021 +0000
+
+    improve readme
+
+[33mcommit 87159b762c3e567f5dac7aa73c5d3ab2657f23cc[m
+Author: Jose T. de Sousa <jose.t.de.sousa@gmail.com>
+Date:   Mon Feb 22 03:20:12 2021 +0000
+
+    initial commit
