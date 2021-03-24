@@ -64,6 +64,14 @@ $I_d$ = 1.02502620056 mA
 $K_b$ = 7.05958243797 mS
 $K_c$ = 8.03913881798 $m\Omega$
 
+In the simulation we used the following simplified circuit, which is equivalent of the one given:
+
+\begin{figure}[h] \centering
+	\includegraphics[width=0.4\linewidth]{sim.pdf}
+	\caption{In this image you can see the number of each node as used for the simulation as well as the direction used for each mesh.}
+	\label{fig:sim}
+\end{figure}
+
 \subsection{Mesh Method Analysis}
 
 \paragraph{} After the aplication of the Mesh Method to the circuit, we obtainded the following equations:
@@ -167,8 +175,6 @@ Finally, solving the problem with Octave we obtain:
 	\label{m:2}
 \end{bmatrix}
 \end{equation}
-
-\clearpage
 
 Once again, solving the matrix equation with Octave we obtain:
 
