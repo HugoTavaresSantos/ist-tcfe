@@ -4,9 +4,9 @@
 \paragraph{} In this section, the circuit shown in Figure~\ref{fic:circuit} is analysed using the Mesh and Node Methods, after which both results are compared.
 Those methods are based upon the Kirchoff Laws, and the behaviour of the elements of the circuit, which are detailed bellow.
 
-Kirchoff Laws
+\paragraph{} Kirchoff Laws
 
-The analysis of this circuit is based on the Kirchoff's Circuit Laws, more specifically, the Kirchoff's Current and Voltage laws (KCL and KVL). The first law states that
+\paragraph{} The analysis of this circuit is based on the Kirchoff's Circuit Laws, more specifically, the Kirchoff's Current and Voltage laws (KCL and KVL). The first law states that
  for a given node, the sum of the electrical currents flowing out of the node is equal to the sum of currents flowing into that node. 
 It can be translated into the following equation:
 
@@ -24,9 +24,9 @@ The second law states that the sum of all the voltages in mesh must be zero, and
 
 [INSERIR FONTES]
 
-Resistor
+\paragraph{}Resistor
 
-A resistor is an electrical component that poses resistance (as the name implies) to current flow, reducing it. The functioning of a resistor can be described
+\paragraph{}A resistor is an electrical component that poses resistance (as the name implies) to current flow, reducing it. The functioning of a resistor can be described
  by the following equation:
 
 \begin{equation}
@@ -115,6 +115,7 @@ $
 	-V_A \\
 	0 \\
 	0
+	\label{m:1}
 \end{bmatrix}
 $
 
@@ -172,6 +173,7 @@ $
 	0 \\
 	-I_D \\
 	0
+	\label{m:2}
 \end{bmatrix}
 $
 
@@ -193,6 +195,5 @@ Once again, solving the matrix equation with Octave we obtain:
 
 \subsection{Equivalence of the Mesh and Node Methods}
 
-[INSERIR RESULTADOS TEÓRICOS]
 
 
