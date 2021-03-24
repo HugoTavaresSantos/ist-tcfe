@@ -56,10 +56,10 @@ V7=F(7,1)
 
 
 fid=fopen("data_current_tab.tex","w")
-fprintf(fid,"@$I_{a}$ & %f\\\\ \\hline\n",1000*IA)
-fprintf(fid,"@$I_{b}$ & %f\\\\ \\hline\n",1000*IB)
-fprintf(fid,"@$I_{c}$ & %f\\\\ \\hline\n",1000*IC)
-fprintf(fid,"@$I_{d}$ & %f\\\\ \\hline\n",1000*ID)
+fprintf(fid,"$I_{a}$ & %f\\\\ \\hline\n",1000*IA)
+fprintf(fid,"$I_{b}$ & %f\\\\ \\hline\n",1000*IB)
+fprintf(fid,"$I_{c}$ & %f\\\\ \\hline\n",1000*IC)
+fprintf(fid,"$I_{d}$ & %f\\\\ \\hline\n",1000*ID)
 fclose(fid)
 
 %%VOLTAGE(V)

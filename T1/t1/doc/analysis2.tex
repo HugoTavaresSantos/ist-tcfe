@@ -6,8 +6,7 @@ Those methods are based upon the Kirchoff Laws, and the behaviour of the element
 
 \paragraph{} Kirchoff Laws
 
-\paragraph{} The analysis of this circuit is based on the Kirchoff's Circuit Laws, more specifically, the Kirchoff's Current and Voltage laws (KCL and KVL). The first law states that
- for a given node, the sum of the electrical currents flowing out of the node is equal to the sum of currents flowing into that node. 
+\paragraph{} The analysis of this circuit is based on the Kirchoff's Circuit Laws, more specifically, the Kirchoff's Current and Voltage laws (KCL and KVL). The first law states that for a given node, the sum of the electrical currents flowing out of the node is equal to the sum of currents flowing into that node. 
 It can be translated into the following equation:
 
 \begin{equation}
@@ -21,8 +20,6 @@ The second law states that the sum of all the voltages in mesh must be zero, and
 	\sum_{k = 1}^n V_k = 0.
 	\label{eq:kvl}
 \end{equation}
-
-[INSERIR FONTES]
 
 \paragraph{}Resistor
 
@@ -47,8 +44,6 @@ Current Source
 	\item Imposes a current I regardless of voltage V
 	\item Infinite internal resistance
 \end{itemize}
-
-[DESCREVER PROGRAMA DO GNU OCTAVE]
 
 For the simulation and analysis we will use the following values with the numerical values given:
 
@@ -132,12 +127,9 @@ Finally, solving the problem with Octave we obtain:
     {\bf Name} & {\bf Value [mA]} \\ \hline
     \input{../mat/data_current_tab}
   \end{tabular}
-  \caption{Operating point. A variable preceded by @ is of type {\em current}
-    and expressed in Ampere; other variables are of type {\it voltage} and expressed in
-    Volt.}
+  \caption{Mesh currents expressed in mA}
   \label{tab:op}
 \end{table}
-
 
 \subsection{Nodal Method Analysis}
 
@@ -185,9 +177,7 @@ Once again, solving the matrix equation with Octave we obtain:
     {\bf Name} & {\bf Value [V]} \\ \hline
     \input{../mat/data_voltage_tab}
   \end{tabular}
-  \caption{Operating point. A variable preceded by @ is of type {\em current}
-    and expressed in Ampere; other variables are of type {\it voltage} and expressed in
-    Volt.}
+  \caption{Node voltages expressed in V}
   \label{tab:op}
 \end{table}
 
