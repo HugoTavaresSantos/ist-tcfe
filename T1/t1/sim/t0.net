@@ -1,0 +1,44 @@
+*
+* NGSPICE simulation script
+*
+
+* forces current values to be saved
+.options savecurrents
+
+* voltage source
+Va 1 0 5.04864033546
+Vzero 8 7 0
+
+* current source
+Id 7 5 1.02502620056m
+
+* current-controlled voltage source
+Hc 4 7 Vzero 8.03913881798k
+
+* voltage-controlled current source
+Gb 5 3 (2,4) 7.05958243757m
+
+R1 1 2 1.00781211614k
+R2 2 3 2.00311223204k
+R3 2 4 3.04503555589k
+R4 0 4 4.17896607062k
+R5 4 5 3.10615699135k
+R6 0 6 2.06090134563k
+R7 6 8 1.00634569025k
+
+.control
+
+op
+
+echo "************************************"
+echo  "Operating point"
+echo "************************************"
+
+echo  "op_TAB"
+print all
+echo  "op_END"
+
+quit
+.endc
+
+.end
