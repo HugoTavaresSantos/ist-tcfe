@@ -1,7 +1,7 @@
 \section{Theoretical Analysis}
 \label{sec:analysis}
 
-\paragraph{} In this section, the circuit shown in Figure~\ref{fic:circuit} is analysed using the Mesh and Node Methods, after which both results are compared.
+\paragraph{} In this section, the circuit shown in Figure 1 is analysed using the Mesh and Node Methods, after which both results are compared.
 Those methods are based upon the Kirchoff Laws, and the behaviour of the elements of the circuit, which are detailed bellow.
 
 \paragraph{} Kirchoff Laws
@@ -90,26 +90,21 @@ $K_c$ = 8.03913881798 $m\Omega$
 
 From which we can obtain the following matrix equation:
 
-
-$
+\begin{equation}
 \begin{bmatrix}
 	0 & 0 & 0 & 1 \\
 	R_1 + R_3 + R_4 &  -R_3 & - R_4 & 0 \\
 	-R_4 & 0 & R_4 + R_6 + R_7 - K_C & 0 \\
 	-R_3 * K_B & R_3 * K_B - 1 & 0 & 0
 \end{bmatrix}
-$
-$\times$
-$
+\times
 \begin{bmatrix}
 	I_A \\
 	I_B \\
 	I_C \\
 	I_D
 \end{bmatrix}
-$
-$=$
-$
+=
 \begin{bmatrix}
 	I_d \\
 	-V_A \\
@@ -117,7 +112,7 @@ $
 	0
 	\label{m:1}
 \end{bmatrix}
-$
+\end{equation}
 
 
 Finally, solving the problem with Octave we obtain:
@@ -139,8 +134,7 @@ Finally, solving the problem with Octave we obtain:
 
 \paragraph{} After the aplication of the Nodal Method to the circuit, we obtainded the following matrix, which in turn was obtained from the equivalent set of equations.
 
-
-$
+\begin{equation}
 \begin{bmatrix}
 	1 & 0 & 0 & 0 & 0 & 0 & 0 \\
 	-G_1 & (G_1 + G_2+G_3) & -G_2 & -G_3 & 0 & 0 & 0 \\
@@ -150,9 +144,7 @@ $
 	0 & -G_3 & 0 & (G_3 + G_4 + G_5) & -G_5 & -G_7 & G_7 \\
 	0 & 0 & 0 & 1 & 0 & (K_C * G_6) & -1
 \end{bmatrix}
-$
-$\times$
-$
+\times
 \begin{bmatrix}
 	V_1 \\
 	V_2 \\
@@ -162,9 +154,7 @@ $
 	V_6 \\
 	V_7
 \end{bmatrix}
-$
-$=$
-$
+=
 \begin{bmatrix}
 	V_A \\
 	0 \\
@@ -175,8 +165,7 @@ $
 	0
 	\label{m:2}
 \end{bmatrix}
-$
-
+\end{equation}
 
 Once again, solving the matrix equation with Octave we obtain:
 
