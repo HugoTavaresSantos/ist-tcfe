@@ -121,8 +121,18 @@ $
 
 Finally, solving the problem with Octave we obtain:
 
-
-[INSERIR RESULTADOS TEÓRICOS]
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [mA]} \\ \hline
+    \input{../mat/data_current_tab}
+  \end{tabular}
+  \caption{Operating point. A variable preceded by @ is of type {\em current}
+    and expressed in Ampere; other variables are of type {\it voltage} and expressed in
+    Volt.}
+  \label{tab:op}
+\end{table}
 
 \subsection{Nodal Method Analysis}
 
@@ -168,7 +178,18 @@ $
 
 Once again, solving the matrix equation with Octave we obtain:
 
-[INSERIR RESULTADOS TEÓRICOS]
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [V]} \\ \hline
+    \input{../mat/data_voltage_tab}
+  \end{tabular}
+  \caption{Operating point. A variable preceded by @ is of type {\em current}
+    and expressed in Ampere; other variables are of type {\it voltage} and expressed in
+    Volt.}
+  \label{tab:op}
+\end{table}
 
 \subsection{Equivalence of the Mesh and Node Methods}
 
