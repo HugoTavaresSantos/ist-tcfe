@@ -1,0 +1,19 @@
+\section{Simulation Analysis}
+\label{sec:simulation}
+
+\paragraph{} For each resistor, the associated negative voltage node $<n->$ was defined as a number greater than the positive one $<n+>$ based on Figure~\ref{fig:sim}.
+\paragraph{} Table~\ref{tab:op} shows the simulated operating point results for the circuit under analysis. Compared to the theoretical analysis results, no difference is perceived, which was to be expected, since for simple circuits of linear equations ngspice uses the same algorithm/method as we do for the analysis.
+
+\clearpage
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [A or V]} \\ \hline
+    \input{../sim/op_tab}
+  \end{tabular}
+  \caption{Operating point. A variable preceded by @ is of type {\em current}
+    and expressed in Ampere; other variables are of type {\it voltage} and expressed in Volt. Obs: 8 is the same node as 7 and it was created to place a fictitious 0V voltage source to aid the analysis}
+  \label{tab:op}
+\end{table}
