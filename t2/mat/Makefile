@@ -1,4 +1,4 @@
-octave.log: master.m
+octave.log: final.m
 	octave $< > $@
 
 clean:
