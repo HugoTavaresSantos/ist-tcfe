@@ -15,7 +15,6 @@
 \hyphenation{GTKWave}
 \usepackage{listings}
 \usepackage[all]{nowidow}
-\usepackage[outdir=./]{epstopdf}
 
 %blind text
 \usepackage{lipsum}
@@ -73,7 +72,8 @@
 \usepackage[numbers,sort&compress]{natbib} % <<<<< References in numbered list [1],[2],...
 \usepackage{subcaption} 
 \usepackage{mdframed}
-\usepackage{amsmath, xparse}
+\usepackage{hyperref}
+\usepackage{amsmath}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Begin Document                                                   %
@@ -92,7 +92,7 @@
 %  Cover page
 % ----------------------------------------------------------------------
 \input{frontcover}
-
+\newpage
 % ----------------------------------------------------------------------
 % Dedication page (optional)
 % ----------------------------------------------------------------------
@@ -120,7 +120,7 @@
 % Table of contents
 %
 \tableofcontents
-
+\newpage
 % List of tables
 %\addcontentsline{toc}{section}{\listtablename}
 %\listoftables
@@ -140,11 +140,11 @@
 %  Body
 % ----------------------------------------------------------------------
 
-\input{intro2}
-
-\input{analysis2}
-
-\input{simulation2}
+\input{intro}
+\pagebreak
+\input{analysis}
+\newpage
+\input{simulation}
 
 \input{conclusion}
 %\cleardoublepage

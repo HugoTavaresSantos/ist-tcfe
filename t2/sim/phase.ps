@@ -1,19 +1,39 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Creator: nutmeg
 %%BoundingBox: 54 54 612 612
+/Re-encode { % inFont outFont encoding | -
+   /MyEncoding exch def
+      exch findfont
+      dup length dict
+      begin
+         {def} forall
+         /Encoding MyEncoding def
+         currentdict
+      end
+      definefont
+} def
+/Helvetica /HelveticaLatin1 ISOLatin1Encoding Re-encode
 1 1 scale
 0.000 0.000 0.000 setrgbcolor
 newpath
 54 54 moveto 612 54 lineto
 612 612 lineto 54 612 lineto
 closepath fill
-/Helvetica findfont 10 scalefont setfont
+/HelveticaLatin1 findfont 10 scalefont setfont
 
 1.000 1.000 1.000 setrgbcolor
 0.502 0.502 0.502 setrgbcolor
 1.000 1.000 1.000 setrgbcolor
 243 66 moveto
+0 rotate
 (frequency) show
+-0 rotate
+0.502 0.502 0.502 setrgbcolor
+1.000 1.000 1.000 setrgbcolor
+54 596 moveto
+0 rotate
+(ac1: *) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 1.000 1.000 1.000 setrgbcolor
 newpath
@@ -21,7 +41,9 @@ newpath
 90 544 lineto
 stroke
 81 87 moveto
+0 rotate
 (0.1) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 125 104 moveto
@@ -41,7 +63,9 @@ newpath
 149 544 lineto
 stroke
 146 87 moveto
+0 rotate
 (1) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 184 104 moveto
@@ -61,7 +85,9 @@ newpath
 208 544 lineto
 stroke
 202 87 moveto
+0 rotate
 (10) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 243 104 moveto
@@ -81,7 +107,9 @@ newpath
 267 544 lineto
 stroke
 258 87 moveto
+0 rotate
 (100) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 302 104 moveto
@@ -101,7 +129,9 @@ newpath
 326 544 lineto
 stroke
 314 87 moveto
+0 rotate
 (10^3) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 361 104 moveto
@@ -121,7 +151,9 @@ newpath
 385 544 lineto
 stroke
 373 87 moveto
+0 rotate
 (10^4) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 420 104 moveto
@@ -141,7 +173,9 @@ newpath
 444 544 lineto
 stroke
 432 87 moveto
+0 rotate
 (10^5) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 479 104 moveto
@@ -161,7 +195,9 @@ newpath
 503 544 lineto
 stroke
 491 87 moveto
+0 rotate
 (10^6) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 538 104 moveto
@@ -181,9 +217,13 @@ newpath
 562 544 lineto
 stroke
 550 87 moveto
+0 rotate
 (10^7) show
+-0 rotate
 382 66 moveto
+0 rotate
 (Hz) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 90 104 moveto
@@ -191,7 +231,9 @@ newpath
 stroke
 1.000 1.000 1.000 setrgbcolor
 54 101 moveto
+0 rotate
 (-200.0) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 90 159 moveto
@@ -199,7 +241,9 @@ newpath
 stroke
 1.000 1.000 1.000 setrgbcolor
 54 156 moveto
+0 rotate
 (-150.0) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 90 214 moveto
@@ -207,7 +251,9 @@ newpath
 stroke
 1.000 1.000 1.000 setrgbcolor
 54 211 moveto
+0 rotate
 (-100.0) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 90 269 moveto
@@ -215,7 +261,9 @@ newpath
 stroke
 1.000 1.000 1.000 setrgbcolor
 60 266 moveto
+0 rotate
 (-50.0) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 1.000 1.000 1.000 setrgbcolor
 newpath
@@ -225,7 +273,9 @@ stroke
 0.502 0.502 0.502 setrgbcolor
 1.000 1.000 1.000 setrgbcolor
 72 321 moveto
+0 rotate
 (0.0) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 90 379 moveto
@@ -233,7 +283,9 @@ newpath
 stroke
 1.000 1.000 1.000 setrgbcolor
 66 376 moveto
+0 rotate
 (50.0) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 90 434 moveto
@@ -241,7 +293,9 @@ newpath
 stroke
 1.000 1.000 1.000 setrgbcolor
 60 431 moveto
+0 rotate
 (100.0) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 90 489 moveto
@@ -249,7 +303,9 @@ newpath
 stroke
 1.000 1.000 1.000 setrgbcolor
 60 486 moveto
+0 rotate
 (150.0) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 newpath
 90 544 moveto
@@ -257,11 +313,15 @@ newpath
 stroke
 1.000 1.000 1.000 setrgbcolor
 60 541 moveto
+0 rotate
 (200.0) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 1.000 1.000 1.000 setrgbcolor
 54 582 moveto
+0 rotate
 (Units) show
+-0 rotate
 0.502 0.502 0.502 setrgbcolor
 1.000 0.000 0.000 setrgbcolor
 newpath
@@ -270,7 +330,9 @@ newpath
 stroke
 1.000 1.000 1.000 setrgbcolor
 313 582 moveto
+0 rotate
 (phase_v6) show
+-0 rotate
 1.000 0.000 0.000 setrgbcolor
 newpath
 90 225 moveto
@@ -282,46 +344,46 @@ newpath
 125 224 lineto
 131 224 lineto
 137 224 lineto
-143 224 lineto
+143 223 lineto
 149 223 lineto
 155 223 lineto
 161 222 lineto
 167 221 lineto
 173 220 lineto
 179 219 lineto
-184 218 lineto
-190 216 lineto
-196 214 lineto
-202 211 lineto
-208 207 lineto
-214 202 lineto
-220 197 lineto
-226 190 lineto
-232 182 lineto
-238 172 lineto
-243 161 lineto
-249 148 lineto
-255 135 lineto
-261 517 lineto
-267 504 lineto
-273 491 lineto
-279 480 lineto
-285 469 lineto
-291 461 lineto
-297 453 lineto
-302 447 lineto
-308 442 lineto
-314 439 lineto
-320 435 lineto
-326 433 lineto
-332 431 lineto
+184 217 lineto
+190 215 lineto
+196 213 lineto
+202 210 lineto
+208 206 lineto
+214 201 lineto
+220 195 lineto
+226 187 lineto
+232 179 lineto
+238 168 lineto
+243 157 lineto
+249 144 lineto
+255 130 lineto
+261 512 lineto
+267 499 lineto
+273 486 lineto
+279 475 lineto
+285 465 lineto
+291 457 lineto
+297 451 lineto
+302 445 lineto
+308 441 lineto
+314 437 lineto
+320 434 lineto
+326 432 lineto
+332 430 lineto
 338 429 lineto
-344 428 lineto
+344 427 lineto
 350 427 lineto
 356 426 lineto
 361 425 lineto
 367 425 lineto
-373 425 lineto
+373 424 lineto
 379 424 lineto
 385 424 lineto
 391 424 lineto
@@ -352,7 +414,9 @@ newpath
 stroke
 1.000 1.000 1.000 setrgbcolor
 119 582 moveto
+0 rotate
 (phase_vs) show
+-0 rotate
 0.000 0.000 1.000 setrgbcolor
 newpath
 90 225 moveto

@@ -4,7 +4,6 @@ Circuit: *
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 
 
-
 No. of Data Rows : 1
 ********************************************
 Transient analysis
@@ -18,17 +17,16 @@ Initial Transient Solution
 Node                                   Voltage
 ----                                   -------
 1                                            0
-2                                 -5.69562e-13
-3                                 -1.81103e-12
-5                                 -4.84707e-13
-6                                      8.46895
-7                                  1.83025e-13
-9                                  1.83025e-13
-8                                  2.78897e-13
-hvd#branch                          0.00278897
-vic#branch                        -9.13493e-17
-vs#branch                         -5.68446e-16
-
+2                                 -5.20991e-13
+3                                 -1.60703e-12
+5                                 -4.44191e-13
+6                                      8.51179
+7                                  1.84122e-13
+9                                  1.84122e-13
+8                                  2.74029e-13
+hvd#branch                          0.00274029
+vic#branch                        -8.93405e-17
+vs#branch                         -5.16953e-16
 
 
 No. of Data Rows : 2008
@@ -41,7 +39,6 @@ Frequency analysis
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 
 
-
 No. of Data Rows : 71
 
 The file "magnitude.ps" may be printed on a postscript printer.
@@ -49,4 +46,4 @@ magnitude_FIG
 
 The file "phase.ps" may be printed on a postscript printer.
 phase_FIG
-ngspice-26 done
+ngspice-31 done

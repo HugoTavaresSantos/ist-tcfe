@@ -1,20 +1,10 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-\paragraph{} In this laboratory assignment we analysed the circuit indicated in Figure 1 successfully. This analysis was done both theoretically, making use of the 
+\par In this laboratory assignment the objective of analysing an RC circuit has been
+achieved. Static, time and frequency analyses have been performed both
+theoretically using the Octave maths tool and by circuit simulation using the
+NGSpice tool. The simulation results matched the theoretical results
+precisely, with the slight differences (in the order of magnitude of $1e-15$) being associated to software precision and roundings done both by Octave and NGSpice. The reason for this almost perfect match is the fact that this is a fairly simple circuit, with only one capacitor and the remaining linear components. Any differences will relate to the capacitor model used by NGSpice. For more complex circuits, these differences are expected to be greater.
 
-The theoretical estimates were compared with the simulation results, yielding very similar results. The plots obtainted from performing the nodal method in GNU Octave 
-and the simulation in NGSpice are mostly identical, with errors being of such low order of magnitude that they become negligible, and are most likely attributable to rounding errors. 
-This outcome was expected, since the circuit is composed of linear components, and hence NGSpice likely used the same methods as Octave did in the theoretical part. Because the 
-results are coherent and within expectation, we consider this task to be successful.
-
-Kirchoff's Laws
- and the Octave math tool to perform the calculations, and by circuit simulation, using the Ngspice tool. Unlike in theory, in real life we could expect several experimental 
-errors, due to the measurement instruments, the way the measurement is performed, internal resistance of the components of the circuit, temperature, etc.
-
-However, using the computer simulation, we came to the conclusion that the results we obtained matched the ones we calculated theoretically precisely.
-This is because this is a relatively simple circuit with few components. This corroborates with what was taught in theory classes, that theoretical and simulation models
- cannot differ; unless we are talking about more complex circuits, which is clearly not the case.
-
-Finally, this lab assignment was useful to put to test our knowledge of circuits and the "laws" that they obey to and familiarize ourselves with sophisticated softwares,
- like Git, Makefile, Octave and Ngspice.
+In conclusion, the results presented in this report show that this model can be used to simulate this circuit with great accuracy.

@@ -12,10 +12,11 @@ all: $(FILE).pdf
 	evince $< &
 
 $(FILE).pdf: $(wildcard *.tex) $(LODFIGS)
+	export TEXINPUTS=$(TEXINPUTS)
+	cp -f ../mat/*.eps .
 	pdflatex  $(FILE).tex
 	pdflatex  $(FILE).tex
 	pdflatex  $(FILE).tex
-
 
 #convert libreoffice draw figures to pdf
 %.pdf: %.odg
