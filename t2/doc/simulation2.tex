@@ -18,22 +18,35 @@ For $t<0$ we replaced the capacitor with a voltage source $V_x$ in order to dete
 
 The graphic bellow is the plot of $v_6(t)$ for the $[0, 20]ms$ time interval, using transient analysis simulation.
 
-[INSERIR GRÁFICO]
-
-\subsection{Natural Response}
-
-The graphic bellow is the plot of $v_6(t)$ for the $[0, 20]ms$ time interval, using transient analysis simulation.
-
-[INSERIR GRÁFICO]
+\begin{figure}[!h]
+	\centering
+	\includegraphics{width=0.7\linewidth]{../sim/natural.pdf}
+	\caption{Natural response simulated for the $V_6$ voltage}
+\end{figure}
 
 \subsection{Total Response}
 
-The previous step was repeating, this time considering $v_s(t)$ and f = 1kHz. In the plot below we have both the stimulus and the response.
+The previous step was repeated, this time considering $v_s(t)$ and f = 1kHz. In the plot below we have both the stimulus and the response.
 
-[INSERIR GRÁFICO]
+\begin{figure}[!h]
+	\centering
+	\includegraphics{width=0.7\linewidth]{../sim/total.pdf}
+	\caption{$V_6$ and $V_S$ voltages simulated responses}
+\end{figure}
+
 
 \subsection{Frequency Response}
 
+Analogous to the theoretical analysis we can find bellow:
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics{width=0.7\linewidth]{../sim/natural.pdf}
+	\caption{Magnitude of $V_S$, $V_c$ and $V_6$ in function of frequency}
+\end{figure}
 
-[INSERIR GRÁFICO]
+\begin{figure}[!h]
+	\centering
+	\includegraphics{width=0.7\linewidth]{../sim/phase.pdf}
+	\caption{Phase of $V_S$, $V_c$ and $V_6$ in function of frequency}
+\end{figure}

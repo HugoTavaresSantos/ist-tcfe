@@ -55,6 +55,8 @@ this into account we can replace the capacitor with an open circuit. With this i
 
 After solving them with the Octave sofware, we obtained the following results:
 
+[INSERIR TABELA]
+
 \begin{table}[hbt!]
   \centering
   \begin{tabular}{|l|r|}
@@ -125,7 +127,7 @@ And knowing that:
 
 We can obtain the following values:
 
-[Inserir valores]
+[INSERIR TABELA]
 
 \subsection{Natural Solution}
 
@@ -137,7 +139,11 @@ We can obtain the following values:
 
 After computing this data on Octave, we can plot the results of the interval [0, 20]ms.
 
-[INSERIR GRÁFICO]
+\begin{figure}[!h]
+	\centering
+	\includegraphics{width=0.7\linewidth]{../mat/natural.pdf}
+	\caption{Natural solution for t € [0, 20]}
+\end{figure}
 
 \subsection{Forced Solution}
 
@@ -178,7 +184,16 @@ After computing this data on Octave, we can plot the results of the interval [0,
 
 From which we obtain the following values:
 
-[INSERIR TABELA]
+\begin{table}[hbt!]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [mA]} \\ \hline
+    \input{../mat/forced_tab}
+  \end{tabular}
+  \caption{Mesh currents expressed in mA}
+  \label{tab:op}
+\end{table}
 
 \subsection{Final Total Solution}
 
@@ -190,10 +205,28 @@ From which we obtain the following values:
 
 We can see the plot of $V_s(t)$ and $V_6(t)$ from -5ms to 20ms [Observações].
 
-\subsection{Frequancy Response}
+\subsection{Frequency Response}
 
-[Completar]
+We can see that for low frequencies (<1Hz) every voltage is in phase. The capacitor is given enough time to charge up to the same voltage 
+as the voltage source.
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics{width=0.7\linewidth]{../mat/total.pdf}
+	\caption{Total solution for $V_6$ and $V_s$}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics{width=0.7\linewidth]{../mat/magnitude.pdf}
+	\caption{Variation of frequency of $V_s$, $V_6$ and $V_c$ voltage magnitudes}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics{width=0.7\linewidth]{../mat/magnitude.pdf}
+	\caption{Variation of frequency of $V_s$, $V_6$ and $V_c$ voltage phases}
+\end{figure}
 
 
 
