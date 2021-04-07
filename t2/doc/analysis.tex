@@ -78,7 +78,7 @@ After solving them with the Octave sofware, we obtained the following results:
 Making use of the matrix below:
 
 \begin{equation}
-\begin{pmatrix}
+\begin{bmatrix}
 -1 & 0 & 0 & 0 & 0 & 0 & 0\\
 G1 & -G1-G2-G3 & G2 & G3 & 0 & 0 & 0\\
 0 & -Kb-G2 & G2 & Kb & 0 & 0 & 0\\
@@ -86,8 +86,8 @@ G1 & -G1 & 0 & -G4 & 0 & -G6 & 0\\
 0 & 0 & 0 & 0 & 0 & G6+G7 & -G7\\
 0 & 0 & 0 & -1 & 0 & -G6*Kd & 1\\
 0 & 0 & 0 & 0 & -1 & 0 & 1\\
-\end{pmatrix}
-\begin{pmatrix}
+\end{bmatrix}
+\begin{bmatrix}
 V1\\
 V2\\
 V3\\
@@ -95,9 +95,9 @@ V5\\
 V6\\
 V7\\
 V8\\
-\end{pmatrix}
+\end{bmatrix}
 =
-\begin{pmatrix}
+\begin{bmatrix}
 0\\
 0\\
 0\\
@@ -105,7 +105,7 @@ V8\\
 0\\
 0\\
 -Vx\\
-\end{pmatrix}
+\end{bmatrix}
 \end{equation}
 \newpage
 And knowing that:
@@ -163,7 +163,7 @@ After computing this data on Octave, we can plot the results of the interval [0,
 \paragraph{} In order to obtain the forced solution we must be able to solve the following equation.  
 
 \begin{equation}
-\begin{pmatrix}
+\begin{bmatrix}
 1 & 0 & 0 & 0 & 0 & 0 & 0\\
 -G1 & G1+G2+G3 & -G2 & -G3 & 0 & 0 & 0\\
 0 & Kb+G2 & -G2 & -Kb & 0 & 0 & 0\\
@@ -171,8 +171,8 @@ After computing this data on Octave, we can plot the results of the interval [0,
 0 & 0 & 0 & 0 & 0 & -G6-G7 & G7\\
 0 & 0 & 0 & 1 & 0 & G6*Kd & -1\\
 0 & -G3 & 0 & G3+G4+G5 & -G5-jwC & G6 & jwC\\
-\end{pmatrix}
-\begin{pmatrix}
+\end{bmatrix}
+\begin{bmatrix}
 V1\\
 V2\\
 V3\\
@@ -180,9 +180,9 @@ V5\\
 V6\\
 V7\\
 V8\\
-\end{pmatrix}
+\end{bmatrix}
 =
-\begin{pmatrix}
+\begin{bmatrix}
 -j\\
 0\\
 0\\
@@ -190,7 +190,7 @@ V8\\
 0\\
 0\\
 0\\
-\end{pmatrix}
+\end{bmatrix}
 \end{equation}
 
 
@@ -247,22 +247,34 @@ As expected, both curves shown in Figure~\ref{fig:total} are constant for $t<0~s
 
 \subsection{Frequency Responses}
 
-Because $V_S(t) = sin(\omega t)$, the magnitude and phase are independent of the frequency $f$. This means that both the magnitude and phase are expected to be constant in the plots that follow.
-
-The magnitude frequency response is given in Figure~\ref{fig:mag}.
-The phase response for frequencies ranging from $0.1~Hz$ to $1~MHz$ is given in Figure~\ref{fig:phase}. The apparent discontinuity showed in the phase of $V(6)$ is in fact caused by the domain of the arctan function that is used to determined the phase, which is, in reality, continuous.
-
-\clearpage
+As we can see in the figure below, for low frequencies every voltage is in phase. The capacitor is given enough time to charge up.
 
 \begin{figure}[h] \centering
 \includegraphics[width=0.5\linewidth]{magnitude.eps}
-	\caption{Magnitude frequency response plot, in dB, of $V_{c}$, $V(6)$ and $V_{s}$.}
+	\caption{Total solution of $V_6$ compared to $V_s$}
         \label{fig:mag}
 \end{figure}
 
 
 \begin{figure}[h] \centering
 \includegraphics[width=0.7\linewidth]{phase.eps}
-	\caption{Phase response plot, in degrees, of $V_{c}$, $V(6)$ and $V_{s}$.}
+	\caption{Variation of the voltage magnitudes of $V_s$, $V_6$ and $V_c$ in function of frequency}
         \label{fig:phase}
 \end{figure}
+
+
+
+The circuit being analysed can be used as a low-pass filter. This means that, for low frequencies, the capacitator has time to charge up to almost the same voltage provided as input (it approximates to an open-circuit behavior), which translates to a proximity in phase between the voltage in the capacitor and the voltage source. Having said that, high frequencies, on the other hand, will give the capacitor a small time to charge up before a change in the input direction occurs (it approximates to a short-circuit behavior), which translates to a growing difference in phase between the voltage in the capacitor and the voltage source. This difference of phase is noticeable for frequencies greater than the cut-off frequency, $f_c$, which is given by $f_c = \frac{1}{2\pi\tau}$. In this particular case, the cut-off frequency value is approximately $50~Hz$. This is why we see a significant voltage drop in Fig~\ref{fig:mag} at around $10~Hz$ and $10^2~Hz$. The phase difference also starts to increase in that same range, as seen in Fig~\ref{fig:phase}.
+
+By simplifying this circuit to an equivalent one composed by a voltage source, capacitor and equivalent resistor, we reach the following equations that help us to better comprehend the magnitude drop and the phase difference rise with the increase of frequency:
+
+\begin{equation}
+  V_c = \frac{V_s}{\sqrt{1 + (R_{Eq}\times C\times 2\pi\times f)^2}}
+  \label{eq:equivalent1}
+\end{equation}
+
+\begin{equation}
+  \phi_{V_c} = -\frac{\pi}{2} + arctan(R_{Eq}\times C\times 2\pi\times f)
+  \label{eq:equivalent2}
+\end{equation}
+

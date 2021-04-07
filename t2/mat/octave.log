@@ -38,7 +38,7 @@ REq =  3106.15699135000
 TAU =  0.00318389229918637
 OctSymPy v2.2.4: this is free software without warranty, see source.
 Initializing communication with SymPy using a popen2() pipe.
-Some output from the Python subprocess (pid 9775) might appear next.
+Some output from the Python subprocess (pid 10537) might appear next.
 
 OctSymPy: Communication established.  SymPy v0.7.6.1.
 V6n(t) = (symfun)

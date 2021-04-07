@@ -1,9 +1,8 @@
 \section{Simulation Analysis}
 \label{sec:simulation}
 
-In this section, the circuit shown in Figure~\ref{fig:rc} is simulated with the use of NGSpice. Using the operating point analysis for both $t<0~s$ and $t=0~s$, we determine the initial conditions needed for the transient analysis, which in turn simulates the circuit's total response.
-Because of the use of NGSpice for this simulation, there was a need to create a "dummy" voltage source, between nodes 7 and 8, that provided $0~V$ to the circuit (thus not changing the behavior of the original circuit). Because this is just a technical issue that does not affect the original circuit, the one shown in Figure~\ref{fig:rc} can be used for illustrative purposes.
-
+In this section we analised the circuit making use of the NGSpice software. Given that this circuit has a sinusoidal voltage source, the current that flows trough the circuit components varies with time.
+As such, in order to simulate the circuit's total response we must run a transient analysis. We also ran an operating point analysis for $t < 0$ and $t = 0$.
 
 \subsection{Operating Point Analysis}
 
@@ -36,7 +35,8 @@ Table~\ref{tab:op2} shows the simulated operating point results for $t=0~s$, whe
 \end{table}
             
 
-\par Compared to the theoretical analysis results, one notices that the simulated data matches almost perfectly the theoretical values. This is expected, as the circuits being simulated in both scenarios are exclusively composed by linear components. Moreover, the slight discrepancies (of the order of $1e-15$) can be associated to the precision of ngspice and to some approximations made by octave because of the precision of the floating point used.
+\paragraoh Compared to the theoretical analysis results, one notices that the simulated data matches almost perfectly the theoretical values. This is expected, as the circuits being simulated in both scenarios are exclusively composed by linear components. 
+
 
 \newpage
 \subsection{Transient Analysis}

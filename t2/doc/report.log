@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.3.18)  7 APR 2021 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.3.18)  7 APR 2021 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -914,7 +914,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2735.
 LaTeX Info: Redefining \] on input line 2736.
-) (./report.aux)
+)
+No file report.aux.
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
@@ -932,7 +933,6 @@ LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 83.
-
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
@@ -1021,17 +1021,16 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 83.
 LaTeX Info: Redefining \pageref on input line 83.
 LaTeX Info: Redefining \nameref on input line 83.
-
-(./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
- (./frontcover.tex
+
+(./frontcover.tex
 
 Package pdftex.def Warning: Option `bb' does not make sense,
 (pdftex.def)                using `viewport' instead on input line 15.
 
-<../../figlib/IST_A_CMYK_POS.pdf, id=72, 845.0471pt x 597.51233pt>
+<../../figlib/IST_A_CMYK_POS.pdf, id=4, 845.0471pt x 597.51233pt>
 File: ../../figlib/IST_A_CMYK_POS.pdf Graphic file (type pdf)
 
 <use ../../figlib/IST_A_CMYK_POS.pdf>
@@ -1048,18 +1047,20 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 S.pdf>]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 122.
-
-(./report.toc
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2.
-)
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
- [2] (./intro.tex <../doc/rc.pdf, id=120, 722.7pt x 542.025pt>
-File: ../doc/rc.pdf Graphic file (type pdf)
+ [2]
+(./intro.tex
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 6.
 
-<use ../doc/rc.pdf>
+
+LaTeX Warning: Reference `fig:rc' on page 3 undefined on input line 6.
+
+<../doc/rc.pdf, id=34, 722.7pt x 542.025pt>
+File: ../doc/rc.pdf Graphic file (type pdf)
+ <use ../doc/rc.pdf>
 Package pdftex.def Info: ../doc/rc.pdf used on input line 11.
 (pdftex.def)             Requested size: 409.71692pt x 307.28679pt.
 )
@@ -1073,131 +1074,202 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 
 ] (../mat/theorcir2_TAB.tex)
 Package epstopdf Info: Source file: <natural.eps>
-(epstopdf)                    date: 2021-04-07 17:48:18
+(epstopdf)                    date: 2021-04-07 17:55:51
 (epstopdf)                    size: 41893 bytes
 (epstopdf)             Output file: <natural-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 17:48:20
-(epstopdf)                    size: 20063 bytes
 (epstopdf)             Command: <repstopdf --outfile=natural-eps-converted-to.p
 df natural.eps>
 (epstopdf)             \includegraphics on input line 155.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=natural-eps-converted-to.pdf natural.eps)...execu
+ted safely (allowed).
 
-<natural-eps-converted-to.pdf, id=171, 578.16pt x 434.62375pt>
+Package epstopdf Info: Result file: <natural-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-07 17:55:53
+(epstopdf)                    size: 20063 bytes.
+
+<natural-eps-converted-to.pdf, id=88, 578.16pt x 434.62375pt>
 File: natural-eps-converted-to.pdf Graphic file (type pdf)
 
 <use natural-eps-converted-to.pdf>
 Package pdftex.def Info: natural-eps-converted-to.pdf used on input line 155.
 (pdftex.def)             Requested size: 273.14923pt x 205.33427pt.
 
-Overfull \hbox (19.67093pt too wide) detected at line 194
+Overfull \hbox (5.98343pt too wide) detected at line 194
 [] [] \OT1/cmr/m/n/10.95 = []
  []
 
 [6 <./natural-eps-converted-to.pdf>] (../mat/forced_tab.tex) [7]
 Package epstopdf Info: Source file: <total.eps>
-(epstopdf)                    date: 2021-04-07 17:48:18
+(epstopdf)                    date: 2021-04-07 17:55:51
 (epstopdf)                    size: 95574 bytes
 (epstopdf)             Output file: <total-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 17:48:21
-(epstopdf)                    size: 29912 bytes
 (epstopdf)             Command: <repstopdf --outfile=total-eps-converted-to.pdf
  total.eps>
 (epstopdf)             \includegraphics on input line 240.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=total-eps-converted-to.pdf total.eps)...executed 
+safely (allowed).
 
-<total-eps-converted-to.pdf, id=202, 578.16pt x 434.62375pt>
+Package epstopdf Info: Result file: <total-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-07 17:55:54
+(epstopdf)                    size: 29912 bytes.
+
+<total-eps-converted-to.pdf, id=122, 578.16pt x 434.62375pt>
 File: total-eps-converted-to.pdf Graphic file (type pdf)
 
 <use total-eps-converted-to.pdf>
 Package pdftex.def Info: total-eps-converted-to.pdf used on input line 240.
 (pdftex.def)             Requested size: 318.66948pt x 239.55444pt.
- [8
 
- <./total-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:total' on page 8 undefined on input line 245.
+
 Package epstopdf Info: Source file: <magnitude.eps>
-(epstopdf)                    date: 2021-04-07 17:48:18
+(epstopdf)                    date: 2021-04-07 17:55:51
 (epstopdf)                    size: 8676 bytes
 (epstopdf)             Output file: <magnitude-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 17:48:22
-(epstopdf)                    size: 7186 bytes
 (epstopdf)             Command: <repstopdf --outfile=magnitude-eps-converted-to
 .pdf magnitude.eps>
-(epstopdf)             \includegraphics on input line 258.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 253.
+runsystem(repstopdf --outfile=magnitude-eps-converted-to.pdf magnitude.eps)...e
+xecuted safely (allowed).
 
-<magnitude-eps-converted-to.pdf, id=218, 578.16pt x 434.62375pt>
+Package epstopdf Info: Result file: <magnitude-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-07 17:55:55
+(epstopdf)                    size: 7186 bytes.
+<magnitude-eps-converted-to.pdf, id=123, 578.16pt x 434.62375pt>
 File: magnitude-eps-converted-to.pdf Graphic file (type pdf)
 
 <use magnitude-eps-converted-to.pdf>
-Package pdftex.def Info: magnitude-eps-converted-to.pdf used on input line 258.
+Package pdftex.def Info: magnitude-eps-converted-to.pdf used on input line 253.
 
 (pdftex.def)             Requested size: 227.62206pt x 171.10747pt.
 Package epstopdf Info: Source file: <phase.eps>
-(epstopdf)                    date: 2021-04-07 17:48:18
+(epstopdf)                    date: 2021-04-07 17:55:51
 (epstopdf)                    size: 8464 bytes
 (epstopdf)             Output file: <phase-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-07 17:48:23
-(epstopdf)                    size: 6970 bytes
 (epstopdf)             Command: <repstopdf --outfile=phase-eps-converted-to.pdf
  phase.eps>
-(epstopdf)             \includegraphics on input line 265.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 260.
+runsystem(repstopdf --outfile=phase-eps-converted-to.pdf phase.eps)...executed 
+safely (allowed).
 
-<phase-eps-converted-to.pdf, id=219, 578.16pt x 434.62375pt>
+Package epstopdf Info: Result file: <phase-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-07 17:55:56
+(epstopdf)                    size: 6970 bytes.
+
+<phase-eps-converted-to.pdf, id=124, 578.16pt x 434.62375pt>
 File: phase-eps-converted-to.pdf Graphic file (type pdf)
 
 <use phase-eps-converted-to.pdf>
-Package pdftex.def Info: phase-eps-converted-to.pdf used on input line 265.
+Package pdftex.def Info: phase-eps-converted-to.pdf used on input line 260.
 (pdftex.def)             Requested size: 318.66948pt x 239.55444pt.
-) [9
 
- <./magnitude-eps-converted-to.pdf> <./phase-eps-converted-to.pdf>] (./simulati
-on.tex (../sim/op_tab.tex)
-(../sim/op_tab.tex) [10]
-<../sim/natural.pdf, id=245, 597.23125pt x 845.1575pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:mag' on page 8 undefined on input line 267.
+
+
+LaTeX Warning: Reference `fig:phase' on page 8 undefined on input line 267.
+
+[8
+
+ <./total-eps-converted-to.pdf> <./magnitude-eps-converted-to.pdf>]) [9 <./phas
+e-eps-converted-to.pdf>] (./simulation.tex
+
+LaTeX Warning: Reference `tab:op' on page 10 undefined on input line 9.
+
+
+LaTeX Warning: Reference `tab:op2' on page 10 undefined on input line 10.
+
+
+LaTeX Warning: Reference `tab:op' on page 10 undefined on input line 10.
+
+(../sim/op_tab.tex) (../sim/op_tab.tex)
+! Undefined control sequence.
+l.38 \paragraoh
+                Compared to the theoretical analysis results, one notices th...
+
+? 
+[10]
+
+LaTeX Warning: Reference `fig:trans' on page 11 undefined on input line 46.
+
+<../sim/natural.pdf, id=162, 597.23125pt x 845.1575pt>
 File: ../sim/natural.pdf Graphic file (type pdf)
 
 <use ../sim/natural.pdf>
 Package pdftex.def Info: ../sim/natural.pdf used on input line 50.
 (pdftex.def)             Requested size: 273.14923pt x 386.54616pt.
  [11 <../sim/natural.pdf>]
-<../sim/total.pdf, id=256, 597.23125pt x 845.1575pt>
+
+LaTeX Warning: Reference `fig:totalsim' on page 12 undefined on input line 59.
+
+
+LaTeX Warning: Reference `fig:rc' on page 12 undefined on input line 59.
+
+<../sim/total.pdf, id=173, 597.23125pt x 845.1575pt>
 File: ../sim/total.pdf Graphic file (type pdf)
  <use ../sim/total.pdf>
 Package pdftex.def Info: ../sim/total.pdf used on input line 64.
 (pdftex.def)             Requested size: 273.14923pt x 386.54616pt.
 
 [12 <../sim/total.pdf>]
-<../sim/magnitude.pdf, id=266, 597.23125pt x 845.1575pt>
+
+LaTeX Warning: Reference `fig:magsim' on page 13 undefined on input line 78.
+
+<../sim/magnitude.pdf, id=183, 597.23125pt x 845.1575pt>
 File: ../sim/magnitude.pdf Graphic file (type pdf)
 
 <use ../sim/magnitude.pdf>
 Package pdftex.def Info: ../sim/magnitude.pdf used on input line 81.
 (pdftex.def)             Requested size: 273.14923pt x 386.54616pt.
  [13 <../sim/magnitude.pdf>]
-<../sim/phase.pdf, id=277, 597.23125pt x 845.1575pt>
+
+LaTeX Warning: Reference `fig:phasesim' on page 14 undefined on input line 90.
+
+<../sim/phase.pdf, id=195, 597.23125pt x 845.1575pt>
 File: ../sim/phase.pdf Graphic file (type pdf)
  <use ../sim/phase.pdf>
 Package pdftex.def Info: ../sim/phase.pdf used on input line 93.
 (pdftex.def)             Requested size: 273.14923pt x 386.54616pt.
 )
-(./conclusion.tex)
+(./conclusion.tex
+! Undefined control sequence.
+l.4 \pargraph
+              In this laboratory assignment the objective of analysing an RC...
+
+? 
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
  [14 <../sim/phase.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
  (./report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: E9DEEAA9C925101316C11D0972D14D0E;1206.
+
+
+Package rerunfilecheck Warning: File `report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `report.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  E9DEEAA9C925101316C11D0972D14D0E;1206.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 17990 strings out of 493029
- 305512 string characters out of 6136234
- 486968 words of memory out of 5000000
- 21242 multiletter control sequences out of 15000+600000
+ 17968 strings out of 493029
+ 305208 string characters out of 6136234
+ 484960 words of memory out of 5000000
+ 21226 multiletter control sequences out of 15000+600000
  29152 words of font info for 50 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  40i,10n,46p,10416b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1211,10 +1283,10 @@ msfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on report.pdf (14 pages, 399201 bytes).
+Output written on report.pdf (14 pages, 397576 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
- 187 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
