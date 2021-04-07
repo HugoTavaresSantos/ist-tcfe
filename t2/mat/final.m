@@ -1,4 +1,10 @@
+pkg load symbolic
+format long
+
+
 fid=fopen('data.txt');
+
+%descarte de informacao nao relevante em data.txt 
 for k=1:9
 fgetl(fid);
 end
@@ -27,8 +33,8 @@ fclose(fid);
 
 fclose(fid2);
 
+%adicionar variaveis de data_circuit1
 data_circuit1
-
 
 G1=1/R1;
 G2=1/R2;
@@ -39,26 +45,25 @@ G6=1/R6;
 G7=1/R7;
 
 
+A=[1 0 0 0 0 0 0;-G1 G1+G2+G3 -G2 -G3 0 0 0;0 Kb+G2 -G2 -Kb 0 0 0;-G1 G1 0 G4 0 G6 0;0 0 0 0 0 -G6-G7 G7;0 0 0 1 0 Kd*G6 -1;0 -G3 0 G3+G4+G5 -G5 G6 0;];
 
-N=[1 0 0 0 0 0 0;-G1 G1+G2+G3 -G2 -G3 0 0 0;0 Kb+G2 -G2 -Kb 0 0 0;-G1 G1 0 G4 0 G6 0;0 0 0 0 0 -G6-G7 G7;0 0 0 1 0 Kd*G6 -1;0 -G3 0 G3+G4+G5 -G5 G6 0;];
-
-x=[Vs;0;0;0;0;0;0];
-
+B=[Vs;0;0;0;0;0;0];
 
 
-solnodes=N\x;
+
+X=A\B;
 
 
 
 printf("\n\nNodal Method\n");
 printf("\n\nNodal Method\n");
-V1 = solnodes(1,1) %V
-V2 = solnodes(2,1) %V
-V3 = solnodes(3,1) %V
-V5 = solnodes(4,1) %V
-V6 = solnodes(5,1) %V
-V7 = solnodes(6,1) %V
-V8 = solnodes(7,1) %V
+V1 = X(1,1) %V
+V2 = X(2,1) %V
+V3 = X(3,1) %V
+V5 = X(4,1) %V
+V6 = X(5,1) %V
+V7 = X(6,1) %V
+V8 = X(7,1) %V
 IR1 = (V1-V2)/R1
 IR2 = (V2-V3)/R2
 IR3 = (V5-V2)/R3
@@ -71,17 +76,18 @@ Ib = -IR2
 Ic = 0
 Ikd = IR6
 
-tab_file=fopen('theorcir1_TAB.tex', 'wt');
-fprintf(tab_file, "$V1$ & %f $V$\\\\ \\hline\n$V2$ & %f $V$\\\\ \\hline\n$V3$ & %f $V$\\\\ \\hline\n$V5$ & %f $V$\\\\ \\hline\n$V6$ & %f $V$\\\\ \\hline\n$V7$ & %f $V$\\\\ \\hline\nV8 & %f $V$\\\\ \\hline\n$I(R_1)$ & %f $mA$\\\\ \\hline\n$I(R_2)$ & %f $mA$\\\\ \\hline\n$I(R_3)$ & %f $mA$\\\\ \\hline\n$I(R_4)$ & %f $mA$\\\\ \\hline\n$I(R_5)$ & %f $mA$\\\\ \\hline\n$I(R_6)$ & %f $mA$\\\\ \\hline\n$I(R_7)$ & %f $mA$\\\\ \\hline\n$I(V_s)$ & %f $mA$\\\\ \\hline\n$I_b$ & %f $mA$\\\\ \\hline\n$I_c$ & %f $mA$\\\\ \\hline\n$I(K_d)$ & %f $mA$\\\\ \\hline\n",V1,V2,V3,V5,V6,V7,V8,IR1*1000,IR2*1000,IR3*1000,IR4*1000,IR5*1000,IR6*1000,IR7*1000,IVs*1000,Ib*1000,Ic*1000,Ikd*1000);
-fclose(tab_file);
+%%%%% DADOS INICIAIS
 
 tab_file=fopen('data_TAB.tex', 'wt');
 fprintf(tab_file, "$R_1$ & %f $k\\Omega$\\\\ \\hline\n$R_2$ & %f $k\\Omega$\\\\ \\hline\n$R_3$ & %f $k\\Omega$\\\\ \\hline\n$R_4$ & %f $k\\Omega$\\\\ \\hline\n$R_5$ & %f $k\\Omega$\\\\ \\hline\n$R_6$ & %f $k\\Omega$\\\\ \\hline\n$R_7$ & %f $k\\Omega$\\\\ \\hline\n$V_S$ & %f $V$\\\\ \\hline\n$C$n& %f $uF$\\\\ \\hline\n$K_b$ & %f $mS$\\\\ \\hline\n$K_d$ & %f $mS$\\\\ \\hline\n",R1/1000,R2/1000,R3/1000,R4/1000,R5/1000,R6/1000,R7/1000,Vs,C/0.000001,Kb*1000,Kd/1000);
 fclose(tab_file);
 
+%%%%% TABELA 1
 
-pkg load symbolic
-format long
+tab_file=fopen('theorcir1_TAB.tex', 'wt');
+fprintf(tab_file, "$V1$ & %f $V$\\\\ \\hline\n$V2$ & %f $V$\\\\ \\hline\n$V3$ & %f $V$\\\\ \\hline\n$V5$ & %f $V$\\\\ \\hline\n$V6$ & %f $V$\\\\ \\hline\n$V7$ & %f $V$\\\\ \\hline\nV8 & %f $V$\\\\ \\hline\n$I(R_1)$ & %f $mA$\\\\ \\hline\n$I(R_2)$ & %f $mA$\\\\ \\hline\n$I(R_3)$ & %f $mA$\\\\ \\hline\n$I(R_4)$ & %f $mA$\\\\ \\hline\n$I(R_5)$ & %f $mA$\\\\ \\hline\n$I(R_6)$ & %f $mA$\\\\ \\hline\n$I(R_7)$ & %f $mA$\\\\ \\hline\n$I(V_s)$ & %f $mA$\\\\ \\hline\n$I_b$ & %f $mA$\\\\ \\hline\n$I_c$ & %f $mA$\\\\ \\hline\n$I(K_d)$ & %f $mA$\\\\ \\hline\n",V1,V2,V3,V5,V6,V7,V8,IR1*1000,IR2*1000,IR3*1000,IR4*1000,IR5*1000,IR6*1000,IR7*1000,IVs*1000,Ib*1000,Ic*1000,Ikd*1000);
+fclose(tab_file);
+
 
 fid=fopen('data.txt');
 for k=1:9
@@ -124,28 +130,30 @@ G7=1/R7;
 
 Vx=V6-V8
 
-N=[1 0 0 0 0 0 0;-G1 G1+G2+G3 -G2 -G3 0 0 0;0 Kb+G2 -G2 -Kb 0 0 0;-G1 G1 0 G4 0 G6 0;0 0 0 0 0 -G6-G7 G7;0 0 0 1 0 Kd*G6 -1;0 0 0 0 1 0 -1];
+D=[1 0 0 0 0 0 0;-G1 G1+G2+G3 -G2 -G3 0 0 0;0 Kb+G2 -G2 -Kb 0 0 0;-G1 G1 0 G4 0 G6 0;0 0 0 0 0 -G6-G7 G7;0 0 0 1 0 Kd*G6 -1;0 0 0 0 1 0 -1];
 
-x=[0;0;0;0;0;0;Vx];
+E=[0;0;0;0;0;0;Vx];
 
 
-solnodes=N\x;
-
+Y=D\E;
 
 
 printf("\n\nNodal Method\n");
 
-V1 = solnodes(1,1) %V
-V2 = solnodes(2,1) %V
-V3 = solnodes(3,1) %V
-V5 = solnodes(4,1) %V
-V6 = solnodes(5,1) %V
-V7 = solnodes(6,1) %V
-V8 = solnodes(7,1) %V
+V1 = Y(1,1) %V
+V2 = Y(2,1) %V
+V3 = Y(3,1) %V
+V5 = Y(4,1) %V
+V6 = Y(5,1) %V
+V7 = Y(6,1) %V
+V8 = Y(7,1) %V
 
 Ix = ((V6-V5)/R5) + ((V3-V2)/R2)
 REq = abs(Vx/Ix)
 TAU = REq*C
+
+
+%%%%% TABELA 2
 
 tab_file=fopen('theorcir2_TAB.tex', 'wt');
 fprintf(tab_file, "$V_x$ & %f $V$\\\\ \\hline\n$I_x$ & %f $mA$\\\\ \\hline\n$R_{Eq}$ & %f $k\\Omega$\\\\ \\hline\n$\\tau$ & %f $s$\\\\ \\hline",Vx, Ix*1000, REq/1000,TAU);
@@ -159,6 +167,7 @@ C = textscan(fid,'%s = %s');
 fclose(fid);
 
 
+%%%%% AQUIVO 1 PARA NGSPICE
 
 fid=fopen('../sim/circuit1.txt', 'wt');
 
@@ -179,6 +188,8 @@ fclose(fid);
 
 
 Vx = V6 - V8;
+
+%%%%% AQUIVO 2 PARA NGSPICE
 
 fid=fopen('../sim/circuit2.txt','wt');
 
@@ -205,6 +216,8 @@ end
 C = textscan(fid,'%s = %s');
 fclose(fid);
 
+%%%%% AQUIVO 3 PARA NGSPICE
+
 fid=fopen('../sim/circuit3.txt','wt');
 
 fprintf(fid, 'Vs 1 0 DC 0\n');
@@ -222,12 +235,15 @@ fprintf(fid, 'Cap 6 8 %sUF\n', C{2}{9});
 
 fclose(fid);
 
+%%%%% AQUIVO AUX. PARA NGSPICE
+
 fid=fopen('../sim/circuit_ic.txt', 'wt');
 
 fprintf(fid, '.IC v(6)=%fV v(8)=%fV\n',V6,V8);
 
 fclose(fid);
 
+%%%%% AQUIVO 4 PARA NGSPICE
 
 fid=fopen('../sim/circuit4.txt','wt');
 
@@ -272,26 +288,26 @@ data_circuit1
 
 w = 2*pi*1000
 
-N = [1 0 0 0 0 0 0;-G1 G1+G2+G3 -G2 -G3 0 0 0;0 Kb+G2 -G2 -Kb 0 0 0;-G1 G1 0 G4 0 G6 0;0 0 0 0 0 -G6-G7 G7;0 0 0 1 0 G6*Kd -1;0 -G3 0 G3+G4+G5 -G5-(j*w*C) G6 j*w*C];
+M = [1 0 0 0 0 0 0;-G1 G1+G2+G3 -G2 -G3 0 0 0;0 Kb+G2 -G2 -Kb 0 0 0;-G1 G1 0 G4 0 G6 0;0 0 0 0 0 -G6-G7 G7;0 0 0 1 0 G6*Kd -1;0 -G3 0 G3+G4+G5 -G5-(j*w*C) G6 j*w*C];
 
-x = [-j; 0; 0; 0; 0; 0; 0];
+N = [-j; 0; 0; 0; 0; 0; 0];
 
-solnodes = N\x;
+Z = M\N;
 
-V1r = abs(solnodes(1,1))
-V1phase = angle(solnodes(1,1))
-V2r = abs(solnodes(2,1))
-V2phase = angle(solnodes(2,1))
-V3r = abs(solnodes(3,1))
-V3phase = angle(solnodes(3,1))
-V5r = abs(solnodes(4,1))
-V5phase = angle(solnodes(4,1))
-V6r = abs(solnodes(5,1))
-V6phase = angle(solnodes(5,1))
-V7r = abs(solnodes(6,1))
-V7phase = angle(solnodes(6,1))
-V8r = abs(solnodes(7,1))
-V8phase = angle(solnodes(7,1))
+V1r = abs(Z(1,1))
+V1phase = angle(Z(1,1))
+V2r = abs(Z(2,1))
+V2phase = angle(Z(2,1))
+V3r = abs(Z(3,1))
+V3phase = angle(Z(3,1))
+V5r = abs(Z(4,1))
+V5phase = angle(Z(4,1))
+V6r = abs(Z(5,1))
+V6phase = angle(Z(5,1))
+V7r = abs(Z(6,1))
+V7phase = angle(Z(6,1))
+V8r = abs(Z(7,1))
+V8phase = angle(Z(7,1))
 
 tab_file=fopen("forced_tab.tex","w");
 
@@ -331,14 +347,14 @@ for i=1:1:30
 
 w=2*pi*freq(i);
 
-N = [1 0 0 0 0 0 0;-G1 G1+G2+G3 -G2 -G3 0 0 0;0 Kb+G2 -G2 -Kb 0 0 0;-G1 G1 0 G4 0 G6 0;0 0 0 0 0 -G6-G7 G7;0 0 0 1 0 G6*Kd -1;0 -G3 0 G3+G4+G5 -G5-(j*w*C) G6 j*w*C];
+R = [1 0 0 0 0 0 0;-G1 G1+G2+G3 -G2 -G3 0 0 0;0 Kb+G2 -G2 -Kb 0 0 0;-G1 G1 0 G4 0 G6 0;0 0 0 0 0 -G6-G7 G7;0 0 0 1 0 G6*Kd -1;0 -G3 0 G3+G4+G5 -G5-(j*w*C) G6 j*w*C];
 
-x = [-j; 0; 0; 0; 0; 0; 0];
+S = [-j; 0; 0; 0; 0; 0; 0];
 
-solnodes = N\x;
-V6(i)=solnodes(5,1);
-V8(i)=solnodes(7,1);
-Vs(i)=solnodes(1,1);
+U = R\S;
+V6(i)=U(5,1);
+V8(i)=U(7,1);
+Vs(i)=U(1,1);
 Vc(i)=V6(i)-V8(i);
 
 end 
