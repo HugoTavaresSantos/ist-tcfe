@@ -1,14 +1,13 @@
-* cir3
-.options savecurrents
+*
+* NGSPICE simulation script
+*
 
-* Netlist
+* forces current values to be saved
+.options savecurrents
 
 .include circuit3.txt
 
 .include circuit_ic.txt
-
-
-* Control Commands
 
 .control
 
@@ -33,5 +32,3 @@ echo natural_FIG
 
 exit
 .endc 
-
-
