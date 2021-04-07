@@ -1,0 +1,23 @@
+
+Circuit: *
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+
+No. of Data Rows : 1
+********************************************
+Frequency analysis
+********************************************
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+
+No. of Data Rows : 71
+
+The file "magnitude.ps" may be printed on a postscript printer.
+magnitude_FIG
+
+The file "phase.ps" may be printed on a postscript printer.
+phase_FIG
+ngspice-26 done

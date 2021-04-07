@@ -1,0 +1,24 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {paragraph}{}{1}{section*.2}
+\contentsline {section}{\numberline {2}Theoretical Analysis}{2}{section.2}
+\contentsline {paragraph}{}{2}{section*.4}
+\contentsline {subsection}{\numberline {2.1}Analysis for t<0}{2}{subsection.2.1}
+\contentsline {paragraph}{}{2}{section*.5}
+\contentsline {subsection}{\numberline {2.2}Equivalent Resistance}{2}{subsection.2.2}
+\contentsline {paragraph}{}{2}{section*.6}
+\contentsline {subsection}{\numberline {2.3}Natural Solution}{3}{subsection.2.3}
+\contentsline {paragraph}{}{3}{section*.7}
+\contentsline {subsection}{\numberline {2.4}Forced Solution}{3}{subsection.2.4}
+\contentsline {paragraph}{}{3}{section*.9}
+\contentsline {subsection}{\numberline {2.5}Final Total Solution}{3}{subsection.2.5}
+\contentsline {paragraph}{}{3}{section*.11}
+\contentsline {subsection}{\numberline {2.6}Frequency Response}{4}{subsection.2.6}
+\contentsline {section}{\numberline {3}Simulation Analysis}{4}{section.3}
+\contentsline {paragraph}{}{4}{section*.15}
+\contentsline {subsection}{\numberline {3.1}Operating Point Analysis}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Natural Response}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Total Response}{4}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Frequency Response}{4}{subsection.3.4}
+\contentsline {section}{\numberline {4}Conclusion}{4}{section.4}
+\contentsline {paragraph}{}{4}{section*.20}

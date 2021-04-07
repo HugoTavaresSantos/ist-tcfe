@@ -1,0 +1,63 @@
+
+
+Nodal Method
+
+
+Nodal Method
+V1 =  5.0640
+V2 =  4.7968
+V3 =  4.2143
+V5 =  4.8366
+V6 =  5.6860
+V7 = -1.8263
+V8 = -2.7829
+IR1 =    2.6671e-04
+IR2 =    2.7973e-04
+IR3 =    1.3020e-05
+IR4 =  0.0011782
+IR5 =    2.7973e-04
+IR6 =    9.1152e-04
+IR7 =    9.1152e-04
+IVs =    2.6671e-04
+Ib =   -2.7973e-04
+Ic = 0
+Ikd =    9.1152e-04
+Vx =  8.46894583832690
+
+
+Nodal Method
+V1 = 0
+V2 = 0
+V3 = -0
+V5 = 0
+V6 =  8.46894583832690
+V7 = -0
+V8 = 0
+Ix =  0.00278897458341974
+REq =  3036.58050119000
+TAU =  0.00309611888869744
+OctSymPy v2.2.4: this is free software without warranty, see source.
+Initializing communication with SymPy using a popen2() pipe.
+Some output from the Python subprocess (pid 5721) might appear next.
+
+OctSymPy: Communication established.  SymPy v0.7.6.1.
+V6n(t) = (symfun)
+
+     t⋅wn
+  A⋅ℯ    
+
+w =  6283.18530717959
+V1r =  1
+V1phase = -1.57079632679490
+V2r =  0.947228549366513
+V2phase = -1.57079632679490
+V3r =  0.832203221578166
+V3phase = -1.57079632679490
+V5r =  0.955090589167369
+V5phase = -1.57079632679490
+V6r =  0.551847311649035
+V6phase =  1.72680038402219
+V7r =  0.360640447595728
+V7phase =  1.57079632679490
+V8r =  0.549553212566972
+V8phase =  1.57079632679490
