@@ -57,20 +57,20 @@ After solving them with the Octave sofware, we obtained the following results:
 
 [INSERIR TABELA]
 
-\begin{table}[hbt!]
-  \centering
-  \begin{tabular}{|l|r|}
-    \hline    
-    {\bf Name} & {\bf Value [mA]} \\ \hline
-    \input{../mat/data_current_tab}
-  \end{tabular}
-  \caption{Mesh currents expressed in mA}
-  \label{tab:op}
-\end{table}
+%\begin{table}[hbt!]
+  %\centering
+  %\begin{tabular}{|l|r|}
+    %\hline    
+ %   {\bf Name} & {\bf Value [mA]} \\ \hline
+    %\input{../mat/data_current_tab}
+  %\end{tabular}
+  %\caption{Mesh currents expressed in mA}
+  %\label{tab:op}
+%\end{table}
 
 \subsection{Equivalent Resistance}
 
-\paragraph{}In order to determine the equivalent resistance we need to determine $V_X$, this is, the difference between §V_6$ - $V_8$. This is made to ensure that the voltage in the capacitor is continuous.
+\paragraph{}In order to determine the equivalent resistance we need to determine $V_X$, this is, the difference between $V_6$ - $V_8$. This is made to ensure that the voltage in the capacitor is continuous.
 
 Making use of the matrix below:
 
@@ -141,7 +141,7 @@ After computing this data on Octave, we can plot the results of the interval [0,
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics{width=0.7\linewidth]{../mat/natural.pdf}
+	\includegraphics[width=0.7\linewidth]{natural.eps}
 	\caption{Natural solution for t € [0, 20]}
 \end{figure}
 
@@ -189,7 +189,7 @@ From which we obtain the following values:
   \begin{tabular}{|l|r|}
     \hline    
     {\bf Name} & {\bf Value [mA]} \\ \hline
-    \input{../mat/forced_tab}
+    \input{forced_tab}
   \end{tabular}
   \caption{Mesh currents expressed in mA}
   \label{tab:op}
@@ -212,19 +212,19 @@ as the voltage source.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics{width=0.7\linewidth]{../mat/total.pdf}
+	\includegraphics[width=0.7\linewidth]{total.eps}
 	\caption{Total solution for $V_6$ and $V_s$}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics{width=0.7\linewidth]{../mat/magnitude.pdf}
+	\includegraphics[width=0.7\linewidth]{magnitude.eps}
 	\caption{Variation of frequency of $V_s$, $V_6$ and $V_c$ voltage magnitudes}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics{width=0.7\linewidth]{../mat/magnitude.pdf}
+	\includegraphics[width=0.7\linewidth]{magnitude.eps}
 	\caption{Variation of frequency of $V_s$, $V_6$ and $V_c$ voltage phases}
 \end{figure}
 
