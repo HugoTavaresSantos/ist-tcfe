@@ -1,18 +1,18 @@
-*
-* NGSPICE simulation script
-* BJT amp with feedback
-
-*Four Square Circuit netlist, time variation
-
-* forces current values to be saved
+* cir3
 .options savecurrents
 
-.INCLUDE circuit4.txt
-.INCLUDE datang2.txt
+* Netlist
+
+.include circuit4.txt
+
+.include circuit_ic.txt
+
+
+* Control Commands
 
 .control
 
-*makes plots in color
+
 set hcopypscolor=0
 set color0=white
 set color1=black
@@ -44,14 +44,14 @@ let vc = v(6)-v(8)
 hardcopy magnitude.ps db(v(6)) db(vs) db(vc) 
 echo magnitude_FIG
 
+
 let phase_v6 = ph(v(6))*180/PI
 let phase_vs = ph(v(1))*180/PI
 let phase_vc = ph(v(6)-v(8))*180/PI
 hardcopy phase.ps phase_v6 phase_vs phase_vc 
 echo phase_FIG
 
+exit
+.endc 
 
-quit
-.endc
 
-.end

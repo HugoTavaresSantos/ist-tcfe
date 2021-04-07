@@ -1,33 +1,24 @@
-*
-* NGSPICE simulation script
-* BJT amp with feedback
-
-*Four Square Circuit netlist, time variation
-
-* forces current values to be saved
+* cir2
 .options savecurrents
 
-.INCLUDE circuit2.txt
-.INCLUDE datang.txt
+* Netlist
+
+.include circuit2.txt
+
+* Control Commands
 
 .control
-
 op
 
 echo "********************************************"
 echo  "Operating point"
 echo "********************************************"
 
-let Vx = v(6)-v(8)
 echo  "op2_TAB"
 print all
-print @Vc[i]
-print v(6) v(8) > datang2.txt
 echo  "op2_END"
 
-quit
-.endc
-
+exit
+.endc 
 .end
-
 

@@ -5,7 +5,7 @@
 # ------------------------------------------------------------
 
 all:
-	echo 86639 | python t2_datagen.py > ./mat/data.txt
+	echo 95780 | python t2_datagen.py > ./mat/data.txt
 	make -C mat
 	make -C sim
 	make -C doc

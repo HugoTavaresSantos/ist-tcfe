@@ -1,18 +1,17 @@
-
-* NGSPICE simulation script
-* BJT amp with feedback
-
-*Four Square Circuit netlist, time variation
-
-* forces current values to be saved
+* cir3
 .options savecurrents
 
-.INCLUDE circuit3.txt
-.INCLUDE datang2.txt
+* Netlist
+
+.include circuit3.txt
+
+.include circuit_ic.txt
+
+
+* Control Commands
 
 .control
 
-*makes plots in color
 set hcopypscolor=0
 set color0=white
 set color1=black
@@ -29,11 +28,10 @@ echo  "Transient analysis"
 echo "********************************************"
 tran 1e-5 20e-3
 
-hardcopy natura.ps v(6)
-echo natura_FIG
+hardcopy natural.ps v(6)
+echo natural_FIG
 
-quit
-.endc
+exit
+.endc 
 
-.end
 

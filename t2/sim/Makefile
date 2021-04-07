@@ -20,16 +20,16 @@ all: ngspice1.log ngspice2.log ngspice3.log ngspice4.log
 	$(foreach i, $(NGSFIGPS4), ps2pdf $i;)
 
 
-ngspice1.log: ../sim/sim1.cir
+ngspice1.log: ../sim/sim1.net
 	ngspice -b $< -o $@
 
-ngspice2.log: ../sim/sim2.cir                           
+ngspice2.log: ../sim/sim2.net                         
 	ngspice -b $< -o $@
 
-ngspice3.log: ../sim/sim3.cir                           
+ngspice3.log: ../sim/sim3.net                          
 	ngspice -b $< -o $@
 
-ngspice4.log: ../sim/sim4.cir                           
+ngspice4.log: ../sim/sim4.net                        
 	ngspice -b $< -o $@
 
 clean:
