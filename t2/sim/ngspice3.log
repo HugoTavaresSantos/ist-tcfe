@@ -4,6 +4,7 @@ Circuit: *
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 
 
+
 No. of Data Rows : 1
 ********************************************
 Transient analysis
@@ -29,8 +30,9 @@ vic#branch                        -8.93405e-17
 vs#branch                         -5.16953e-16
 
 
+
 No. of Data Rows : 2008
 
 The file "natural.ps" may be printed on a postscript printer.
 natural_FIG
-ngspice-31 done
+ngspice-26 done

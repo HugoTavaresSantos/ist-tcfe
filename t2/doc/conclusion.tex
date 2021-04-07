@@ -1,10 +1,10 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-\par In this laboratory assignment the objective of analysing an RC circuit has been
-achieved. Static, time and frequency analyses have been performed both
-theoretically using the Octave maths tool and by circuit simulation using the
-NGSpice tool. The simulation results matched the theoretical results
-precisely, with the slight differences (in the order of magnitude of $1e-15$) being associated to software precision and roundings done both by Octave and NGSpice. The reason for this almost perfect match is the fact that this is a fairly simple circuit, with only one capacitor and the remaining linear components. Any differences will relate to the capacitor model used by NGSpice. For more complex circuits, these differences are expected to be greater.
+\pargraph In this laboratory assignment the objective of analysing an RC circuit has been
+achieved with success. 
 
-In conclusion, the results presented in this report show that this model can be used to simulate this circuit with great accuracy.
+The theoretical estimates were compared with the simulation results, yielding very similar results. The plots obtainted from performing the nodal method in
+ GNU Octave and the simulation in NGSpice are mostly identical, with errors being of such low order of magnitude that they become negligible,
+ and are most likely attributable to rounding errors. This outcome was expected, since the circuit is composed of linear components, and hence NGSpice likely 
+used the same methods as Octave did in the theoretical part. Because the results are coherent and within expectation, we consider this task to be successful.

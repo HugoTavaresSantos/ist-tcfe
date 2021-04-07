@@ -55,7 +55,7 @@ this into account we can replace the capacitor with an open circuit. With this i
 
 After solving them with the Octave sofware, we obtained the following results:
 
-
+\clearpage
 
 \begin{table}[h]
   \centering
@@ -160,7 +160,7 @@ After computing this data on Octave, we can plot the results of the interval [0,
 
 \subsection{Forced Solution}
 
-T\paragraph{} In order to obtain the forced solution we must be able to solve the following equation.  
+\paragraph{} In order to obtain the forced solution we must be able to solve the following equation.  
 
 \begin{equation}
 \begin{pmatrix}
@@ -234,6 +234,7 @@ The final total solution $V_6(t)$ is achieved by superimposing the natural and f
 \end{equation}
 By converting the phasors to real time functions for $f = 1 kHz$ and superimposing the natural and forced solutions, we can plot both $V_S(t)$ and $V_6(t)$ in the interval $[-5, 20]~ms$, as shown in the figure below:
 
+\clearpage
 
 \begin{figure}[h] \centering
 \includegraphics[width=0.7\linewidth]{total.eps}
@@ -251,32 +252,17 @@ Because $V_S(t) = sin(\omega t)$, the magnitude and phase are independent of the
 The magnitude frequency response is given in Figure~\ref{fig:mag}.
 The phase response for frequencies ranging from $0.1~Hz$ to $1~MHz$ is given in Figure~\ref{fig:phase}. The apparent discontinuity showed in the phase of $V(6)$ is in fact caused by the domain of the arctan function that is used to determined the phase, which is, in reality, continuous.
 
+\clearpage
+
 \begin{figure}[h] \centering
 \includegraphics[width=0.5\linewidth]{magnitude.eps}
-	\caption{Magnitude frequency response plot, in dB, of $V_{c}$, $V(6)$ and $V_{s}$. Frequencies ranging from $0.1~Hz$ to $1~MHz$ in logarithmic scale.}
+	\caption{Magnitude frequency response plot, in dB, of $V_{c}$, $V(6)$ and $V_{s}$.}
         \label{fig:mag}
 \end{figure}
 
 
 \begin{figure}[h] \centering
 \includegraphics[width=0.7\linewidth]{phase.eps}
-	\caption{Phase response plot, in degrees, of $V_{c}$, $V(6)$ and $V_{s}$. Frequencies ranging from $0.1~Hz$ to $1~MHz$ in logarithmic scale.}
+	\caption{Phase response plot, in degrees, of $V_{c}$, $V(6)$ and $V_{s}$.}
         \label{fig:phase}
 \end{figure}
-
-
-
-The circuit being analysed can be used as a low-pass filter. This means that, for low frequencies, the capacitator has time to charge up to almost the same voltage provided as input (it approximates to an open-circuit behavior), which translates to a proximity in phase between the voltage in the capacitor and the voltage source. Having said that, high frequencies, on the other hand, will give the capacitor a small time to charge up before a change in the input direction occurs (it approximates to a short-circuit behavior), which translates to a growing difference in phase between the voltage in the capacitor and the voltage source. This difference of phase is noticeable for frequencies greater than the cut-off frequency, $f_c$, which is given by $f_c = \frac{1}{2\pi\tau}$. In this particular case, the cut-off frequency value is approximately $50~Hz$. This is why we see a significant voltage drop in Fig~\ref{fig:mag} at around $10~Hz$ and $10^2~Hz$. The phase difference also starts to increase in that same range, as seen in Fig~\ref{fig:phase}.
-
-By simplifying this circuit to an equivalent one composed by a voltage source, capacitor and equivalent resistor, we reach the following equations that help us to better comprehend the magnitude drop and the phase difference rise with the increase of frequency:
-
-\begin{equation}
-  V_c = \frac{V_s}{\sqrt{1 + (R_{Eq}\times C\times 2\pi\times f)^2}}
-  \label{eq:equivalent1}
-\end{equation}
-
-\begin{equation}
-  \phi_{V_c} = -\frac{\pi}{2} + arctan(R_{Eq}\times C\times 2\pi\times f)
-  \label{eq:equivalent2}
-\end{equation}
-
