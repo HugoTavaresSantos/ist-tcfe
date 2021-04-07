@@ -1,14 +1,16 @@
+*
+* NGSPICE simulation script
+* BJT amp with feedback
 
-* cir1
+*Four Square Circuit netlist, time variation
+
+* forces current values to be saved
 .options savecurrents
 
-* Netlist
-
-.include circuit1.txt
-
-* Control Commands
+.INCLUDE circuit1.txt
 
 .control
+
 op
 
 echo "********************************************"
@@ -17,8 +19,10 @@ echo "********************************************"
 
 echo  "op_TAB"
 print all
+print v(6)-v(8) > datang.txt
 echo  "op_END"
 
-exit
-.endc 
+quit
+.endc
+
 .end
