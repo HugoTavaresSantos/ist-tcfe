@@ -1,0 +1,24 @@
+C =    5.00000000000000e-04
+R1 =  1300
+R2 =  5300
+dc_vO =  22.7987158812494
+ripple_env =  0.410002450700382
+average_env =  22.7987158812494
+average_reg =  12
+ripple_reg =  0.318318875404268
+chosen_values_TAB
+R1 = 1.300000e+03 
+R2 = 5.300000e+03 
+C = 5.000000e-04 
+chosen_values_END
+
+envelope_TAB
+Ripple(envelope) = 4.100025e-01 
+Average(envelope) = 2.279872e+01 
+envelope_END
+
+regulator_TAB
+Ripple(regulator) = 3.183189e-01 
+Average(regulator) = 1.200000e+01 
+regulator_END
+
