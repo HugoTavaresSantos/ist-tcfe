@@ -1,32 +1,29 @@
-*INDEPENDENT VOLTAGE SOURCE Vs
+*Independent voltage source Vs
 Vs 1 0 0 sin(0 230 50 0 0 90) 
 
 
-*RESISTORS
+*dependent current source
+Ftransf 1 0 Etransf n
+
+
+*Dependent voltage source
+Etransf 2 3 1 0 n 
+
+
+*Resistors
 R1 4 GND 1.3k
 R2 4 5 5.3k
 
 
-*DEPENDENT CURRENT SOURCE
-Ftransf 1 0 Etransf n
+*Capacitor
+C1 4 GND 0.0005
 
 
-*DEPENDENT VOLTAGE SOURCE
-Etransf 2 3 1 0 n 
-
-
-
-*DIODES
-* FULL WAVE RECTIFIER
-
+*Diodes
 D1 2 4 DEFAULT
 D2 GND 2 DEFAULT
 D3 3 4 DEFAULT
 D4 GND 3 DEFAULT
-
-
-*IN SERIES
-
 D5 5 6 DEFAULT
 D6 6 7 DEFAULT
 D7 7 8 DEFAULT
@@ -46,13 +43,4 @@ D20 20 21 DEFAULT
 D21 21 22 DEFAULT
 D22 22 23 DEFAULT
 D23 23 24 DEFAULT
-D24 24 25 DEFAULT
-D25 25 26 DEFAULT
-D26 26 GND DEFAULT
-
-
-
-
-*CAPACITOR
-C1 4 GND 0.0005
-
+D24 24 GND DEFAULT
