@@ -3,7 +3,7 @@ clear all
 
 pkg load symbolic;
 format long;
-%By Ricardo Rodrigues Vitor Liotti and Hugo Santos
+%By Ricardo Rodrigues Vitor Liotti and Hugo Santos.
 %All OUR CHOSEN VALUES
 C = 0.0005
 R1 = 1300
@@ -20,7 +20,7 @@ Req = 1/((1/R1)+(1/R2));
 T = 1/(2*f); 
 w = 2*pi*f;
 
-%ESTIMATION FOR TOFF USING NEWTON RAPHSODY
+%ESTIMATION FOR T_OFF USING NEWTON RAPHSODY
 t_OFF = (1/4)*T;
 for i = 1:20
   f = Vr*C*w*sin(w*t_OFF) - (Vr/R1)*cos(w*t_OFF) - I_s*(exp(12/(Vt*num_diodes))-1);
@@ -29,7 +29,7 @@ for i = 1:20
 end
 
 
-%ESTIMATION FOR TON USING NEWTON RAPHSODY
+%ESTIMATION FOR T_ON USING NEWTON RAPHSODY
 t_ON = (3/4)*T;
 for i = 1:20
   g = Vr*cos(w*t_ON)+Vr*cos(w*t_OFF)*exp(-(1/(Req*C))*(t_ON-t_OFF));
