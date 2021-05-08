@@ -1,0 +1,398 @@
+
+Circuit: * ngspice lab 3 simulation group 46
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+No. of Data Rows : 1
+********************************************
+TRANSIENT ANALYSIS
+********************************************
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+1                                          230
+4                                      21.5406
+5                                      14.5686
+2                                      22.2703
+3                                    -0.729712
+6                                      13.9064
+7                                      13.2442
+8                                       12.582
+9                                      11.9198
+10                                     11.2576
+11                                     10.5954
+12                                     9.93315
+13                                     9.27094
+14                                     8.60873
+15                                     7.94652
+16                                     7.28431
+17                                      6.6221
+18                                     5.95989
+19                                     5.29768
+20                                     4.63547
+21                                     3.97326
+22                                     3.31105
+23                                     2.64884
+24                                     1.98663
+25                                     1.32442
+26                                     0.66221
+etransf#branch                      -0.0178851
+vs#branch                           0.00178851
+
+
+No. of Data Rows : 1001
+env_TAB
+maximum(v(4))-minimum(v(4)) = 3.137481e-01
+mean(v(4)) = 2.130724e+01
+env_END
+reg_TAB
+maximum(v(5))-minimum(v(5)) = 2.437839e-02
+mean(v(5)) = 1.455071e+01
+reg_END
+merit_TAB
+1/ (515.8* ((maximum(v(5))-minimum(v(5))) + abs(mean(v(5)-12)) + 10e-6)) = 7.528792e-04
+merit_END
+
+The file "sim3a.ps" may be printed on a postscript printer.
+sim3a_FIG
+
+The file "sim3b.ps" may be printed on a postscript printer.
+sim3b_FIG
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+No. of Data Rows : 1
+	Node                                  Voltage
+	----                                  -------
+	----	-------
+	V(26)                            -2.27650e-19
+	V(25)                            -4.55300e-19
+	V(24)                            -1.13139e-19
+	V(23)                            2.118530e-20
+	V(22)                            1.353915e-19
+	V(21)                            -2.27281e-19
+	V(20)                            -5.29191e-19
+	V(19)                            -2.51340e-19
+	V(18)                            -1.89975e-19
+	V(17)                            -4.82645e-19
+	V(16)                            -5.71914e-19
+	V(15)                            -6.91266e-19
+	V(14)                            -3.55280e-19
+	V(13)                            -4.24590e-19
+	V(12)                            -7.51276e-19
+	V(11)                            -6.20256e-19
+	V(10)                            -4.41472e-19
+	V(9)                             -3.91529e-19
+	V(8)                             -4.33471e-19
+	V(7)                             -3.39429e-19
+	V(6)                             -1.64133e-19
+	V(3)                             -1.35389e-19
+	V(2)                             -1.35389e-19
+	V(5)                             -1.90621e-27
+	V(4)                             -2.03137e-27
+	V(1)                             0.000000e+00
+
+	Source	Current
+	------	-------
+
+	@c1[i]                           0.000000e+00
+	@d26[id]                         -2.27650e-31
+	@d25[id]                         -2.27650e-31
+	@d24[id]                         3.421609e-31
+	@d23[id]                         1.343247e-31
+	@d22[id]                         1.142062e-31
+	@d21[id]                         -3.62672e-31
+	@d20[id]                         -3.01911e-31
+	@d19[id]                         2.778513e-31
+	@d18[id]                         6.136533e-32
+	@d17[id]                         -2.92670e-31
+	@d16[id]                         -8.92695e-32
+	@d15[id]                         -1.19352e-31
+	@d14[id]                         3.359863e-31
+	@d13[id]                         -6.93097e-32
+	@d12[id]                         -3.26686e-31
+	@d11[id]                         1.310197e-31
+	@d10[id]                         1.787845e-31
+	@d9[id]                          4.994269e-32
+	@d8[id]                          -4.19419e-32
+	@d7[id]                          9.404139e-32
+	@d6[id]                          1.752963e-31
+	@d5[id]                          1.641330e-31
+	@d4[id]                          1.353893e-31
+	@d3[id]                          -1.35389e-31
+	@d2[id]                          1.353893e-31
+	@d1[id]                          -1.35389e-31
+	@ftransf[i]                      2.464191e-48
+	@r2[i]                           -2.36149e-32
+	@r1[i]                           -1.56259e-30
+	vs#branch                        -2.46419e-48
+	etransf#branch                   2.464191e-47
+
+ Capacitor models (Fixed capacitor)
+      model                     C
+
+        cap                     0
+         cj                     0
+       cjsw                     0
+       defw                 1e-05
+       defl                     0
+     narrow                     0
+      short                     0
+        del                     0
+        tc1                     0
+        tc2                     0
+         di                     0
+      thick                     0
+     bv_max                 1e+99
+
+ Diode models (Junction Diode model)
+      model               default
+
+      level                     1
+         is                 1e-14
+        jsw                     0
+         rs                     0
+        trs                     0
+       trs2                     0
+          n                     1
+         ns                     1
+         tt                     0
+       ttt1                     0
+       ttt2                     0
+        cjo                     0
+         vj                     1
+          m                   0.5
+        tm1                     0
+        tm2                     0
+        cjp                     0
+        php                     1
+       mjsw                  0.33
+        ikf                     0
+        ikr                     0
+        nbv                     1
+       area                     1
+         pj                     0
+       tlev                     0
+      tlevc                     0
+         eg                  1.11
+        xti                     3
+        cta                     0
+        ctp                     0
+        tpb                     0
+       tphp                     0
+       jtun                     0
+     jtunsw                     0
+       ntun                    30
+     xtitun                     3
+        keg                     1
+         kf                     0
+         af                     1
+         fc                   0.5
+        fcs                   0.5
+         bv                     0
+        ibv                 0.001
+        tcv                     0
+     fv_max                 1e+99
+     bv_max                 1e+99
+        isr                 1e-14
+         nr                     1
+
+ Resistor models (Simple linear resistor)
+      model                     R
+
+        rsh                     0
+     narrow                     0
+      short                     0
+        tc1                     0
+        tc2                     0
+        tce                     0
+       defw                 1e-05
+          l                 1e-05
+         kf                     0
+         af                     0
+          r                     0
+     bv_max                 1e+99
+         lf                     1
+         wf                     1
+         ef                     1
+
+ Capacitor: Fixed capacitor
+     device                    c1
+      model                     C
+capacitance                0.0005
+      dtemp                     0
+     bv_max                 1e+99
+          i                     0
+          p                    -0
+
+ CCCS: Current controlled current source
+     device               ftransf
+          m                     0
+          i           2.46419e-48
+          v                     0
+          p                     0
+
+ Diode: Junction Diode model
+     device                   d26                   d25                   d24
+      model               default               default               default
+         vd           -2.2765e-19           -2.2765e-19           3.42161e-19
+         id           -2.2765e-31           -2.2765e-31           3.42161e-31
+         gd           1.38662e-12           1.38662e-12           1.38662e-12
+         cd                     0                     0                     0
+
+ Diode: Junction Diode model
+     device                   d23                   d22                   d21
+      model               default               default               default
+         vd           1.34325e-19           1.14206e-19          -3.62672e-19
+         id           1.34325e-31           1.14206e-31          -3.62672e-31
+         gd           1.38662e-12           1.38662e-12           1.38662e-12
+         cd                     0                     0                     0
+
+ Diode: Junction Diode model
+     device                   d20                   d19                   d18
+      model               default               default               default
+         vd          -3.01911e-19           2.77851e-19           6.13653e-20
+         id          -3.01911e-31           2.77851e-31           6.13653e-32
+         gd           1.38662e-12           1.38662e-12           1.38662e-12
+         cd                     0                     0                     0
+
+ Diode: Junction Diode model
+     device                   d17                   d16                   d15
+      model               default               default               default
+         vd           -2.9267e-19          -8.92695e-20          -1.19352e-19
+         id           -2.9267e-31          -8.92695e-32          -1.19352e-31
+         gd           1.38662e-12           1.38662e-12           1.38662e-12
+         cd                     0                     0                     0
+
+ Diode: Junction Diode model
+     device                   d14                   d13                   d12
+      model               default               default               default
+         vd           3.35986e-19          -6.93097e-20          -3.26686e-19
+         id           3.35986e-31          -6.93097e-32          -3.26686e-31
+         gd           1.38662e-12           1.38662e-12           1.38662e-12
+         cd                     0                     0                     0
+
+ Diode: Junction Diode model
+     device                   d11                   d10                    d9
+      model               default               default               default
+         vd            1.3102e-19           1.78784e-19           4.99427e-20
+         id            1.3102e-31           1.78784e-31           4.99427e-32
+         gd           1.38662e-12           1.38662e-12           1.38662e-12
+         cd                     0                     0                     0
+
+ Diode: Junction Diode model
+     device                    d8                    d7                    d6
+      model               default               default               default
+         vd          -4.19419e-20           9.40414e-20           1.75296e-19
+         id          -4.19419e-32           9.40414e-32           1.75296e-31
+         gd           1.38662e-12           1.38662e-12           1.38662e-12
+         cd                     0                     0                     0
+
+ Diode: Junction Diode model
+     device                    d5                    d4                    d3
+      model               default               default               default
+         vd           1.64133e-19           1.35389e-19          -1.35389e-19
+         id           1.64133e-31           1.35389e-31          -1.35389e-31
+         gd           1.38662e-12           1.38662e-12           1.38662e-12
+         cd                     0                     0                     0
+
+ Diode: Junction Diode model
+     device                    d2                    d1
+      model               default               default
+         vd           1.35389e-19          -1.35389e-19
+         id           1.35389e-31          -1.35389e-31
+         gd           1.38662e-12           1.38662e-12
+         cd                     0                     0
+
+ Resistor: Simple linear resistor
+     device                    r2                    r1
+      model                     R                     R
+ resistance                  5300                  1300
+         ac                  5300                  1300
+      dtemp                     0                     0
+     bv_max                 1e+99                 1e+99
+      noisy                     1                     1
+          i          -2.36149e-32          -1.56259e-30
+          p           2.95563e-60           3.17421e-57
+
+ VCVS: Voltage controlled voltage source
+     device               etransf
+          i           2.46419e-47
+          v                     0
+          p                     0
+
+ Vsource: Independent voltage source
+     device                    vs
+         dc                     0
+      acmag                     0
+      pulse                     0
+                              230
+                               50
+                                0
+                                0
+                               90
+        sin                     0
+                              230
+                               50
+                                0
+                                0
+                               90
+        exp                     0
+                              230
+                               50
+                                0
+                                0
+                               90
+        pwl                     0
+                              230
+                               50
+                                0
+                                0
+                               90
+       sffm                     0
+                              230
+                               50
+                                0
+                                0
+                               90
+         am                     0
+                              230
+                               50
+                                0
+                                0
+                               90
+    trnoise                     0
+                              230
+                               50
+                                0
+                                0
+                               90
+   trrandom                     0
+                              230
+                               50
+                                0
+                                0
+                               90
+          i          -2.46419e-48
+          p                     0
+
+
+Total analysis time (seconds) = 0.137
+
+Total elapsed time (seconds) = 0.156 
+
+Total DRAM available = 5975.457 MB.
+DRAM currently available =  882.906 MB.
+Total ngspice program size =   24.016 MB.
+Resident set size =   12.008 MB.
+Shared ngspice pages =    8.051 MB.
+Text (code) pages =    5.070 MB.
+Stack = 0 bytes.
+Library pages =    4.273 MB.
+

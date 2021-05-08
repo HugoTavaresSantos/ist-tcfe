@@ -3,71 +3,60 @@ clear all
 
 pkg load symbolic;
 format long;
-
-%CHOSEN VALUES
+%By Ricardo Rodrigues Vitor Liotti and Hugo Santos
+%All OUR CHOSEN VALUES
 C = 0.0005
 R1 = 1300
 R2 = 5300
-
-%SET VALUES
-freq=50;
+f=50;
 Vs = 230;
-
-%TRANSFORMER
-n = 10;
+n = 16;
 Vr = Vs/n;
-
-%VOLTAGE REGULATOR 
-num_diodes = 22;
+num_diodes = 20;
 von = 0.6;
 I_s = 1e-14;
 Vt = 0.025;
-diode_mat = 1;
-
-T = 1/(2*freq); %FULL-WAVE RECTIFIER EFFECT
-tOFF = (1/4)*T;  %INITIAL GUESS FOR TOFF
-w = 2*pi*freq;
-
-%NEWTON RAPHSON METHOD TO APPROXIMATE TOFF
-
-for i = 1:10
-  f = Vr*C*w*sin(w*tOFF) - (Vr/R1)*cos(w*tOFF) - I_s*(exp(12/(diode_mat*Vt*num_diodes))-1);
-  df = Vr*C*(w^2)*cos(w*tOFF)+(Vr/R1)*w*sin(w*tOFF);
-  tOFF = tOFF - (f/df);
-end
-
-tON = (3/4)*T; %INITIAL GUESS FOR TON
-
 Req = 1/((1/R1)+(1/R2));
+T = 1/(2*f); 
+w = 2*pi*f;
 
-%NEWTON RAPHSON METHOD TO APPROXIMATE TON
-
-for i = 1:10
-  g = Vr*cos(w*tON)+Vr*cos(w*tOFF)*exp(-(1/(Req*C))*(tON-tOFF));
-  dg = -w*Vr*sin(w*tON)-Vr*cos(w*tOFF)*(1/(Req*C))*exp(-(1/(Req*C))*(tON-tOFF));
-  tON = tON - (g/dg);
+%ESTIMATION FOR TOFF USING NEWTON RAPHSODY
+t_OFF = (1/4)*T;
+for i = 1:20
+  f = Vr*C*w*sin(w*t_OFF) - (Vr/R1)*cos(w*t_OFF) - I_s*(exp(12/(Vt*num_diodes))-1);
+  df = Vr*C*(w^2)*cos(w*t_OFF)+(Vr/R1)*w*sin(w*t_OFF);
+  t_OFF = t_OFF - (f/df);
 end
 
-t = 0:(1e-6):0.2;
+
+%ESTIMATION FOR TON USING NEWTON RAPHSODY
+t_ON = (3/4)*T;
+for i = 1:20
+  g = Vr*cos(w*t_ON)+Vr*cos(w*t_OFF)*exp(-(1/(Req*C))*(t_ON-t_OFF));
+  dg = -w*Vr*sin(w*t_ON)-Vr*cos(w*t_OFF)*(1/(Req*C))*exp(-(1/(Req*C))*(t_ON-t_OFF));
+  t_ON = t_ON - (g/dg);
+end
+
+t = 0:(1e-6):0.4;
 
 l = length(t);
 
 vO = zeros(1,l);
 
 for i = 1:l
-  if t(i)<=tOFF
+  if t(i)<=t_OFF
     vO(i) = abs(Vr*cos(w*t(i)));
   else
-    if t(i)<=tON
-      vO(i) = Vr*abs(cos(w*tOFF))*exp(-((t(i)-tOFF)/(Req*C)));
+    if t(i)<=t_ON
+      vO(i) = Vr*abs(cos(w*t_OFF))*exp(-((t(i)-t_OFF)/(Req*C)));
     else
-      tOFF = tOFF + T;
-      tON = tON + T;
-      if t(i)<=tOFF
+      t_OFF = t_OFF + T;
+      t_ON = t_ON + T;
+      if t(i)<=t_OFF
         vO(i) = abs(Vr*cos(w*t(i)));
       else
-        if t(i)<=tON
-          vO(i) = Vr*abs(cos(w*tOFF))*exp(-((t(i)-tOFF)/(Req*C)));
+        if t(i)<=t_ON
+          vO(i) = Vr*abs(cos(w*t_OFF))*exp(-((t(i)-t_OFF)/(Req*C)));
         end
       end
     end
@@ -85,7 +74,7 @@ for i=1:length(t)
 	vr(i) = abs(vr(i));
 endfor
 
-rd = (diode_mat*Vt)/(I_s*exp((12/num_diodes)/(diode_mat*Vt))); %DIODES RESISTANCE
+rd = (Vt)/(I_s*exp((12/num_diodes)/(Vt))); %DIODES RESISTANCE
 ac_vO_fin = ((num_diodes*rd)/(num_diodes*rd + R2))*(vO - dc_vO);
 
 if vO_aux >= 12
@@ -104,6 +93,33 @@ ripple_reg = max(vO_fin)-min(vO_fin)
 
 
 
+
+%PLOTS
+	
+%OUTPUTS AND GRAPHS OF VOLTAGE RECTIFIER, ENVELOPE DETECTOR AND REGULATOR TERMINALS
+hf = figure(1);
+plot(t*1000, vr,"k");
+hold on
+plot(t*1000,vO, "b");
+hold on
+plot(t*1000,vO_fin,"r");
+xlabel ("t[ms]");
+ylabel ("vO [V]");
+legend('vr', 'vO envelope', 'vO regulator', 'Location', 'northeast');
+print (hf, "output.eps", "-depsc");
+	
+%COMPONENTS OF AC
+hf = figure(2);
+plot (t*1000, vO-12, "b");
+hold on
+plot(t*1000, vO_fin-12,"r");
+xlabel ("t[ms]");
+ylabel ("vO [V]");
+legend('vO envelope - 12V', 'vO regulator - 12V',  'Location', 'northeast');
+print (hf, "ac_component.eps", "-depsc");
+
+
+
 %TABLES
 
 printf ("chosen_values_TAB\n");
@@ -113,37 +129,13 @@ printf ("C = %e \n", C);
 printf ("chosen_values_END\n\n");
 
 printf ("envelope_TAB\n");
-printf ("Ripple(envelope) = %e \n", ripple_env);
-printf ("Average(envelope) = %e \n", average_env);
+printf ("enveloperipple = %e \n", ripple_env);
+printf ("envelopeaverage = %e \n", average_env);
 printf ("envelope_END\n\n");
 
 printf ("regulator_TAB\n");
-printf ("Ripple(regulator) = %e \n", ripple_reg);
-printf ("Average(regulator) = %e \n", average_reg);
+printf ("regulatorripple = %e \n", ripple_reg);
+printf ("regulatoraverage = %e \n", average_reg);
 printf ("regulator_END\n\n");
-
-%PLOTS
-	
-%VOLTAGE OUTPUTS AT RECTIFIER, ENVELOPE DETECTOR AND REGULATOR TERMINALS
-hf = figure(1);
-plot(t*1000, vr,"g");
-hold on
-plot(t*1000,vO, "r");
-hold on
-plot(t*1000,vO_fin,"b");
-xlabel ("t[ms]");
-ylabel ("vO [Volts]");
-legend('vr', 'vO envelope', 'vO regulator', 'Location', 'northeast');
-print (hf, "output.eps", "-depsc");
-	
-%AC COMPONENT 
-hf = figure(2);
-plot (t*1000, vO-12, "r");
-hold on
-plot(t*1000, vO_fin-12,"b");
-xlabel ("t[ms]");
-ylabel ("vO [Volts]");
-legend('vO envelope - 12V', 'vO regulator - 12V',  'Location', 'northeast');
-print (hf, "ac_component.eps", "-depsc");
 
 
