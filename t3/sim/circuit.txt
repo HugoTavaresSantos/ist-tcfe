@@ -2,7 +2,7 @@
 Vs 1 0 0 sin(0 230 50 0 0 90) 
 
 
-*dependent current source
+*Dependent current source
 Ftransf 1 0 Etransf n
 
 

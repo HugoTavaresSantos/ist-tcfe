@@ -1,5 +1,5 @@
 .options savecurrents
-.param n = 1/10
+.param n = 1/16
 
 
 .include circuit.txt
@@ -28,6 +28,7 @@ echo  "TRANSIENT ANALYSIS"
 echo "********************************************"
 tran 0.0002 400m 200m
 
+*tables
 echo "env_TAB"
 print maximum(v(4))-minimum(v(4))
 print mean(v(4))
@@ -42,11 +43,12 @@ echo "merit_TAB"
 print ((1/(maximum(v(5))-minimum(v(5)))) + (1/abs(mean(v(5)-12))))/509
 echo "merit_END"
 
-hardcopy sim3a.ps {v(2)-v(3)} {v(4)} {v(5)}
-echo sim3a_FIG
+*figures
+hardcopy sim1.ps {v(2)-v(3)} {v(4)} {v(5)}
+echo sim1_FIG
 
-hardcopy sim3b.ps {v(4)-12} {v(5)-12}
-echo sim3b_FIG
+hardcopy sim2.ps {v(4)-12} {v(5)-12}
+echo sim2_FIG
 
 
 .endc
