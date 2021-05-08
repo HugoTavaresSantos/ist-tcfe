@@ -99,17 +99,18 @@ ripple_reg = max(vO_fin)-min(vO_fin)
 %OUTPUTS AND GRAPHS OF VOLTAGE RECTIFIER, ENVELOPE DETECTOR AND REGULATOR TERMINALS
 hf = figure(1);
 plot(t*1000, vr,"k");
-hold on
+print (hf, "output.eps", "-depsc");
+hf=figure(2)
 plot(t*1000,vO, "b");
 hold on
 plot(t*1000,vO_fin,"r");
 xlabel ("t[ms]");
 ylabel ("vO [V]");
 legend('vr', 'vO envelope', 'vO regulator', 'Location', 'northeast');
-print (hf, "output.eps", "-depsc");
+print (hf, "output2.eps", "-depsc");
 	
 %COMPONENTS OF AC
-hf = figure(2);
+hf = figure(3);
 plot (t*1000, vO-12, "b");
 hold on
 plot(t*1000, vO_fin-12,"r");
