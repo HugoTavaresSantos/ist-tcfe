@@ -3,10 +3,32 @@
 
 [FALTAM TABELAS AQUI]
 
-\paragraph{} Given the input signal of the circuit is sinusoidal the voltage and current values vary with time, and it is relevant to know how the two parameters evovlve with time.
+\paragraph{} Given the input signal of the circuit is sinusoidal the voltage and current values vary with time, and it is relevant to know how the two parameters evovlve with time. 
+We also ran an operating point analysis to confirm the forward-active region operation of the two transients. We also ran a frequency response analysis, in order to see the gain and
+ bandwith of the amplified signal.
 
-\paragraph{} As such, we ran a transient analysis for the circuit, lasting 10 periods.
+\subsection{Operating Point Analysis}
 
-\paragraph{} In the simulation there was a period of about 4 seconds necessary for the output voltage to stabilize. As such, only this period is considered.
+\paragraph{} In the table bellow we can see the resuls obtained from the operating point analysis.
 
-[ACRESCENTAR MAIS QUANDO TIVERMOS OS GRAFS]
+[TABELA]
+
+\paragraph{} The voltages in nodes in and in2 are zero, which is expected given that the source as no DC component. Likewise, the the voltage in node out is zero, since the output 
+coupling capacitor blocks the incoming DC voltage.
+
+\paragraph{} We can also see that Vcoll > Vbase > Vemit, which is antecipated due to the operation of the npn transistor. Vemit2 > Vcoll > GND, which is also expected, sinse the pnp 
+transistor operation ensures that the voltage drop occurs from the emitter to the collector. Therefore, both our transistors work in the PFA.
+
+\subsection{Frequancy Response and Impedances}
+
+\paragraph{} We measured the input impedance, seen from the source point of view, and the output impedance, see from the output pointe of view.
+
+[GRÁFICOS]
+
+\paragraph{} As we can see in the graphs above, the gain graph has traits of a band-pass filter, filtering frequencies that are not medium.
+
+[TABELA]
+
+\paragraph{} In the table above we can see the results obtained.
+
+\subsection{Frequancy Response and Impedances}
