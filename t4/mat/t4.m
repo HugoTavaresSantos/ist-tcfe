@@ -5,13 +5,16 @@ pkg load symbolic
 
 format long
 
-gain stage
+%gain stage
 
 VT=25e-3
 BFN=178.7
 VAFN=69.7
 VBEON=0.7
-
+BFP = 227.3
+VAFP = 37.2
+VEBON = 0.7
+RS=100
 VCC=12
 RB1=80000
 RB2=20000
@@ -93,16 +96,6 @@ AV2dB = 20*log10(AV2)
 ZI2=(1/gpi2)/(1-AV2)
 ZO2 = 1/(gm2+gpi2+go2+ge2)
 
-fid = fopen("outoper_tab.tex","w")
-fprintf(fid, "IB2&%f A \\\\ \\hline \n", IB2)
-fprintf(fid, "IC2&%f A \\\\ \\hline \n", IC2)
-fprintf(fid, "IE2&%f A \\\\ \\hline \n", IE2)
-fprintf(fid, "VO2&%f V \\\\ \\hline \n", VO2)
-fprintf(fid, "$V_{vcc}$&12 V \\\\ \\hline \n")
-fprintf(fid, "$V_{coll}$&%f V \\\\ \\hline \n",VO1)
-fprintf(fid, "$V_{emit2}$&%f V \\\\ \\hline \n", VO2)
-fprintf(fid, "$V_{out}$&0 V \\\\ \\hline \n")
-fclose(fid)
 
 fid = fopen("output_tab.tex","w")
 

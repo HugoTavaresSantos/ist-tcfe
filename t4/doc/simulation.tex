@@ -1,8 +1,6 @@
 \section{Simulation Analysis}
 \label{sec:simulation}
 
-[FALTAM TABELAS AQUI]
-
 \paragraph{} Given the input signal of the circuit is sinusoidal the voltage and current values vary with time, and it is relevant to know how the two parameters evovlve with time. 
 We also ran an operating point analysis to confirm the forward-active region operation of the two transients. We also ran a frequency response analysis, in order to see the gain and
  bandwith of the amplified signal.
@@ -11,7 +9,16 @@ We also ran an operating point analysis to confirm the forward-active region ope
 
 \paragraph{} In the table bellow we can see the resuls obtained from the operating point analysis.
 
-[TABELA]
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Values [V]} \\ \hline
+    \input{../sim/op_tab} 
+  \end{tabular}
+  \caption{Operating point node voltage values of the amplifier circuit.}
+  \label{tab:operator}
+\end{table}
 
 \paragraph{} The voltages in nodes in and in2 are zero, which is expected given that the source as no DC component. Likewise, the the voltage in node out is zero, since the output 
 coupling capacitor blocks the incoming DC voltage.
@@ -23,15 +30,41 @@ transistor operation ensures that the voltage drop occurs from the emitter to th
 
 \paragraph{} We measured the input impedance, seen from the source point of view, and the output impedance, see from the output pointe of view.
 
-[GRÁFICOS]
+\begin{figure}[!h] \centering
+\includegraphics[width=0.6\linewidth]{stage.eps}
+\caption{Gain Stage output voltage gain (frequency response).}
+\label{fig:gainstage}
+\end{figure}
+
+\begin{figure}[!h] \centering
+\includegraphics[width=0.6\linewidth]{output.eps}
+\caption{Load output voltage gain (frequency response).}
+\label{fig:outputstage}
+\end{figure}
 
 \paragraph{} As we can see in the graphs above, the gain graph has traits of a band-pass filter, filtering frequencies that are not medium.
 
-[TABELA]
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Values} \\ \hline
+    \input{../sim/data_tab}
+    \input{../sim/outimp_tab}     
+  \end{tabular}
+  \caption{Output gain, bandwidth, and input and output impedances of the audio amplifier circuit (as a whole).}
+  \label{tab:main}
+\end{table}
 
 \paragraph{} In the table above we can see the results obtained.
 
 \paragraph{} Finally, graph bellow compares the input and output signals, and we can conclude that the objective of the lab as achieved, this is, amplify the input signal. I this case, the imput signal 
 was amplified 50 times.
 
-[GRÁFICO]
+\begin{figure}[!h] \centering
+\includegraphics[width=0.6\linewidth]{comp.eps}
+\caption{Evolution of the AC signal from input to output.}
+\label{fig:comp}
+\end{figure}
+
+\clearpage

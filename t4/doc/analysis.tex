@@ -1,26 +1,74 @@
 \section{Theoretical Analysis}
 \label{sec:analysis}
 
-\paragraph{} Before anything we performed an operating point analysis to check if the transistor was operating in the forward operating region.
-
-[TABELA]
-
-\paragraph{} The results we obtained were the following. We can see that VCE > VBEON (0.7 V) which is the desirable result.
-
 \subsection{Gain Stage}
 
 \paragraph{} For the gain stage, the incremental stage provided the following results:
 
-[TABELA]
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Values} \\ \hline
+    \input{../mat/gain_tab} 
+  \end{tabular}
+  \caption{Gain stage theoretical results}
+  \label{tab:gain}
+\end{table}
 
-\paragraph{} From where we reach the conclusion that an output stage in necessary. [...].
+\paragraph{} From where we reach the conclusion that an output stage in necessary given the magnitude of the output impedance.
 
 \subsection{Output Stage}
 
-\paragraph{} As we can see, the output impedance of this stage is much lower than the input.
+\paragraph{} The results of the output stage theoretical model are:
 
-\paragraph{} The output stage is also desirably low, specially when compared with the 8 Ohm of the speakers.
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Values} \\ \hline
+    \input{../mat/output_tab} 
+  \end{tabular}
+  \caption{Output stage theoretical results}
+  \label{tab:output}
+\end{table}
 
-[GRÁFICOS E TABELAS] 
+\paragraph{} As we can see, the output impedance of this stage is much lower than the input. The output stage is also desirably low, specially when compared with the 8 Ohm of the speakers. At last, the total circuit gain results.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Values} \\ \hline
+    \input{../mat/circuit_tab} 
+  \end{tabular}
+  \caption{Total circuit theoretical gain results}
+  \label{tab:output}
+\end{table}
+
+\paragraph{} The frequency response of the circuit for the output voltage of the circuit, in terms of gain and phase difference, and the lower cut-off frequency are plotted here:
+
+\begin{figure}[!h] \centering
+\includegraphics[width=0.6\linewidth]{Gain.eps}
+\caption{Load output voltage gain (frequency response).}
+\label{fig:gainfreq}
+\end{figure}
+
+\begin{figure}[!h] \centering
+\includegraphics[width=0.6\linewidth]{Phase.eps}
+\caption{Load output voltage phase difference (frequency response).}
+\label{fig:phasefreq}
+\end{figure}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Values} \\ \hline
+    \input{../mat/frequency_tab} 
+  \end{tabular}
+  \caption{Gain for medium frequencies and lower cut-off frequency of the output voltage signal.}
+  \label{tab:freq}
+\end{table}
 
 \clearpage
