@@ -1,0 +1,16 @@
+
+Circuit: .options savecurrents
+
+********************************************
+Frequency analysis
+********************************************
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+No. of Data Rows : 71
+-v(out)[40]/vin#branch[40] = 8.377343e+00,4.407828e-01
+zo = 8.388931e+00
+outimp_TAB
+Output impedance = 8.38893 Ohm
+outimp_END
+ngspice-31 done
