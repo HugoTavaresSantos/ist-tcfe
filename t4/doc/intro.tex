@@ -1,26 +1,29 @@
 \section{Introduction}
 \label{sec:introduction}
 
+\paragraph{} The objective of this laboratory assignment is to design an Audio Amplifier, this is a device that can increase the power of a 
+signal so it can be transmited (in our case a voltage that varies with time).
 
-\paragraph{} AC Power is the most commonly used type of electricity, having gained popularity over DC during the latter half of the 19th century. However, many equipments require DC for it's operation, 
-specifically devices that use batteries, such as computers or cellphones. Therefore, it is necessary to convert the AC Power obtained either by an alternator (as in the case of a car) or the power grid, to DC.
-This process is achieved trough the use of a Rectifier or AC/DC Converter. (In the case of Portugal and most of Europe the power grid runs on 230 V / 50 Hz.)
+\paragraph{} The architecture chosen for the lab is the one detailed bellow.
 
-\paragraph{} The objective of this laboratory assignmente is to model the AC/DC Converter, shown im Figure~\ref{fig:cir}. This circuit is made up of:
+[ARQUITETURA DO AMPLIFICADOR]
 
-\begin{itemize}
-	\item Transformer: the element of the circuit responsible for converting AC to DC Power.
-	\item Envelope Detector: which "smothens" the original pulsed DC signal.
-	\item Voltage Regulator: which reduces the voltage, keeping it close to the 12V target.
-\end{itemize}
+\paragraph{} It can be decomposed in wo main stages: the Gain Stage (in [COR])  and the Output Stage (in [COR]).
 
-\paragraph{} In this lab, the Theoretical Analysis is done in Section \ref{sec:analysis}, the Simulation Analysis in Section \ref{sec:simulation}, the results are compared in Section \ref{sec:comparison}. The
-Conclusion is presented in Section \ref{sec:conclusion}.
+\paragraph{} In the Gain Stage the original signal will be amplified. However, this amplified signal is not apropriate to be connected to our load (the speaker) due to it's high independance.
 
-\begin{figure}[h] \centering
-\includegraphics[width=0.7\linewidth]{./cir.pdf}
-\caption{The AC/DC converter on which this report is based}
-\label{fig:cir}
-\end{figure}
+\paragraph{} Therefore, the signal goes through the Output Stage, that, due to it0s lowed independance, makes the signal suitable to be conected to the speake (which is connected in series).
+
+\paragraph{} To perform the Theoretical Analysis we will look into the Gain and Output Stages separatelly.
+
+\paragraph{} In Section 2 we will perform the Theortetical Analysis of the circuit, determining the operating point gain, inpendances and frequency response.
+
+\paragraph{} In Section 3 we will obtain the simulation results to perform the Simulation Analysis.
+
+\paragraph{} To conclude, we will draw our comparisons in Section 4 and lay our conclusions, looking into any possible differences and determining it's causes.
+
+\paragraph{} In the table bellow we list the numerical values of the components used.
+
+[LISTA DOS COMPONENTES]
 
 \clearpage
