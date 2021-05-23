@@ -19,7 +19,7 @@ VCC=12
 RB1=80000
 RB2=20000
 RE1=200
-RC1=900
+RC1=800
 RE2 = 50
 C_i=0.0001
 C_b=0.0015
@@ -98,7 +98,7 @@ ZO2 = 1/(gm2+gpi2+go2+ge2)
 
 
 fid = fopen("output_tab.tex","w")
-
+fprintf(fid, "Input Z&%f Ohm \\\\ \\hline \n", ZI2)
 fprintf(fid, "Output Z&%f Ohm \\\\ \\hline \n", ZO2)
 fprintf(fid, "Gain&%f \\\\ \\hline \n", AV2)
 fprintf(fid, "Gain(dB)&%f dB \\\\ \\hline \n", AV2dB)
