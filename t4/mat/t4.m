@@ -16,14 +16,14 @@ VAFP = 37.2
 VEBON = 0.7
 RS=100
 VCC=12
-RB1=80000
+RB1=60000
 RB2=20000
 RE1=200
 RC1=800
 RE2 = 50
 C_i=0.0001
-C_b=0.0015
-C_o=0.0005
+C_b=0.0025
+C_o=0.0015
 
 %Operating point and all calculations
 

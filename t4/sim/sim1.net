@@ -12,7 +12,7 @@ Rin in in2 100
 Ci in2 base 0.1m
 
 * bias circuit
-R1 vcc base 80k
+R1 vcc base 60k
 R2 base 0 20k
 
 * gain stage
@@ -21,14 +21,14 @@ Rc vcc coll 0.8k
 Re emit 0 200
 
 * bypass capacitor
-Cb emit 0 1.5m
+Cb emit 0 2.5m
 
 * output stage
 Q2 0 coll emit2 BC557A
 Rout emit2 vcc 50
 
 * output coupling capacitor
-Co emit2 out 0.5m
+Co emit2 out 1.5m
 
 * load
 RL out 0 8
@@ -97,7 +97,7 @@ meas ac lower WHEN transf1 = zone
 meas ac upper WHEN transf1 = zone CROSS = LAST
 let bandwidth = upper - lower
 
-let cost = 0.2 + 0.1 + 0.008 + (80 + 20 + 0.8 + 0.2 + 0.05) + (1500 + 100 + 500)
+let cost = 0.2 + 0.1 + 0.008 + (60 + 20 + 0.8 + 0.2 + 0.05) + (5500 + 100 + 3500)
 let merit = (gain2*bandwidth)/(cost*lower)
 
 print gain1 gain2 lower upper bandwidth cost merit

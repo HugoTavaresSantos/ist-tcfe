@@ -11,7 +11,7 @@ Vin out 0 0 ac 1.0 sin(0 1 1k)
 Ci 0 base 0.1m
 
 * bias circuit
-R1 vcc base 80k
+R1 vcc base 60k
 R2 base 0 20k
 
 * gain stage
@@ -20,14 +20,14 @@ Rc vcc coll 0.8k
 Re emit 0 200
 
 * bypass capacitor
-Cb emit 0 1.5m
+Cb emit 0 2.5m
 
 * output stage
 Q2 0 coll emit2 BC557A
 Rout emit2 vcc 50
 
 * output coupling capacitor
-Co emit2 out 0.5
+Co emit2 out 1.5
 
 .op
 .end
