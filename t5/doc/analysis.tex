@@ -34,7 +34,7 @@ This central frequency result represents a 2.309\% relative error, which isn't a
 \label{fig:gainfreq}
 \end{figure}
 
-As wanted, the plot has the trait of a narrower band-pass filter, with its top gain arriving in the 1 kHz neighbourhood, and the gain itself is on the 40 dB as pretended.
+As requested, the plot has the trait of a narrower band-pass filter, with its top gain reaching about 1 kHz, and the gain itself is on the 40 dB as pretended.
 
 \begin{figure}[h!] \centering
 \includegraphics[width=0.6\linewidth]{phase.eps}
@@ -50,8 +50,11 @@ voltage is in phase with the input voltage.
 For a frequency of 1 KHz we computed the circuit gain and input and output impedances for the amplifier. Also, we determined a theoretical figure of merit based on the predicted results with the set 
 of values we chose.
 
-The gain value for the entire circuit is obtained by multiplying the individual gains of each of the three stages of the circuit. This is an ideal situation, where we don't take into account the loss of signal between stages, or charge effects between the same stages.
+The gain value for the entire circuit is obtained by multiplying the individual gains of each of the three stages of the circuit. This is an ideal situation, 
+where we don't take into account the loss of signal between stages, or charge effects between the same stages.
+
 These are the equations for the gain values:
+
 \begin{equation}
 High Pass Gain=|\frac{R_{1}C_{1}jw_{O}}{1+R_{1}C_{1}jw_{O}}|
 \end{equation}
@@ -62,7 +65,7 @@ Amplifier Gain=1+\frac{R_{4}}{R_{3}}
 Low Pass Gain=|\frac{1}{1+R_{2}C_{2}jw_{O}}|
 \end{equation}
 
-Using the incremental model for the circuit (the input impedance of the OP-AMP is infinite and the output impedance of the OP-AMP is null, according to the model studied in class), we determined the following equations for the input and output impedances of the circuit:
+Using the incremental model for the circuit (the input impedance of the OPAMP is infinite and the output impedance of the OPAMP is null, according to the model studied in class), we determined the following equations for the input and output impedances of the circuit:
 
 \begin{equation}
 Z_i = R_1 + \frac{1}{jw_{O}C_{1}}
@@ -82,9 +85,7 @@ Z_o = \frac{R_2}{1+jw_OR_2C_2}
   \label{tab:data}
 \end{table}
 
-This way we can see that the gain for a frequency of 1KHz is almost the same as the gain for the calculated central frequency, meaning the 1KHz frequency is still very much within the band pass region.
+From this we can see that the gain for a 1KHz frequency is very close to the gain calculated for the central frequency, meaning that the said frequency is still very much within the band pass region.
+
 We obtained then a relative error of 0.643\% for the gain at central frequency, which is meant to be 100, so this a 
-fantastic theoretical result. The input impedance value is quite high, which is good, so, depending on the resistance of the input, most of the input 
-voltage will flow through ahead to the OP-AMP as pretended. The output impedance value though is quite large, so this circuit will not be suited to loads with very low resistance values, but given 
-the components we had available there wasn't much room for improvement. Also, we don't know the load that would be linked to this circuit, so we can't fully know how good or bad this value is, 
-we just know it is clearly not the most desirable.
+which is a very good theoretical result.
