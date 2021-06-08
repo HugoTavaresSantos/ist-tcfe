@@ -1,0 +1,114 @@
+
+Circuit: *-----------------------------------------------------------------------------
+
+false = 0.000000e+00
+true = 1.000000e+00
+boltz = 1.380620e-23
+c = 2.997925e+08
+e = 2.718282e+00
+echarge = 1.602190e-19
+i = 0.000000e+00,1.000000e+00
+kelvin = -2.73150e+02
+no = 0.000000e+00
+pi = 3.141593e+00
+planck = 6.626200e-34
+yes = 1.000000e+00
+********************************************
+TRANSIENT ANALYSIS
+********************************************
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vcc                                          5
+vee                                         -5
+in                                           0
+x1.11                                  4.96032
+x1.12                                  4.96034
+x1.6                              -2.67957e-07
+x1.7                                 0.0028322
+outp                                0.00283123
+x1.53                                        4
+x1.54                                       -4
+x1.90                              1.92782e-05
+x1.91                                       40
+x1.92                                      -40
+x1.99                                        0
+x1.10                                -0.607742
+inv_in                            -6.04936e-05
+x1.13                                -0.593864
+non_inv                           -7.97332e-05
+x1.14                                 -0.59387
+x1.9                                         0
+x1.8                                 0.0028322
+x                                  0.000903415
+out                                 0.00283123
+h.x1.hlim#branch                    -3.856e-17
+v.x1.vlim#branch                   1.92782e-08
+v.x1.vln#branch                   -4.00036e-11
+v.x1.vlp#branch                   -4.00008e-11
+v.x1.ve#branch                     4.00408e-12
+v.x1.vc#branch                     3.99797e-12
+v.x1.vb#branch                    -2.67957e-12
+vin#branch                                   0
+vee#branch                         0.000565821
+vcc#branch                        -0.000565615
+a$poly$e.x1.egnd#branch_1_0       -6.53541e-08
+
+
+
+No. of Data Rows : 1010
+ERROR: (internal)  This operation is not defined for display type printf.
+Can't open viewport for graphics.
+
+The file "vo1.ps" may be printed on a postscript printer.
+vo1_FIG
+********************************************
+Frequency analysis
+********************************************
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+
+No. of Data Rows : 71
+ERROR: (internal)  This operation is not defined for display type printf.
+Can't open viewport for graphics.
+ERROR: (internal)  This operation is not defined for display type printf.
+Can't open viewport for graphics.
+
+The file "vo1f.ps" may be printed on a postscript printer.
+vo1f_FIG
+
+The file "vo1p.ps" may be printed on a postscript printer.
+vo1p_FIG
+gain1               =  3.997705e+01 at=  1.000000e+03
+gain2               =  9.973612e+01 at=  1.000000e+03
+Error(parse.c--checkvalid): gain: no such vector.
+lower               =  3.705219e+04
+upper               =  3.705219e+04
+central = 3.705219e+04
+zi = 9.999790e-01,-7.23583e-01
+modulus = 1.234314e+00
+phase = -3.58894e+01
+data_TAB
+Gain  = 99.7361
+Gain(dB) = 39.977
+Lower cut-off frequency = 37052.2 Hz
+Upper cut-off frequency = 37052.2 Hz
+Bandwidth = 0 Hz
+Central frequency = 37052.2 Hz
+Input impedance = 0.999979 + j*-0.723583 kOhm
+Input impedance modulus = 1.23431 kOhm
+Input impedance phase = -35.8894 degrees
+data_END
+merit_TAB
+cost = 1.362695e+04
+merit = 2.035478e-09
+merit_END
+ngspice-26 done

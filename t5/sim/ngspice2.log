@@ -1,0 +1,82 @@
+
+Circuit: *-----------------------------------------------------------------------------
+
+false = 0.000000e+00
+true = 1.000000e+00
+boltz = 1.380620e-23
+c = 2.997925e+08
+e = 2.718282e+00
+echarge = 1.602190e-19
+i = 0.000000e+00,1.000000e+00
+kelvin = -2.73150e+02
+no = 0.000000e+00
+pi = 3.141593e+00
+planck = 6.626200e-34
+yes = 1.000000e+00
+********************************************
+TRANSIENT ANALYSIS
+********************************************
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vcc                                          5
+vee                                         -5
+out                                          0
+x1.11                                  4.96032
+x1.12                                  4.96034
+x1.6                              -3.08482e-07
+x1.7                                0.00297342
+outp                                0.00283091
+x1.53                                        4
+x1.54                                       -4
+x1.90                               0.00285018
+x1.91                                       40
+x1.92                                      -40
+x1.99                                        0
+x1.10                                -0.607742
+inv_in                            -6.04958e-05
+x1.13                                -0.593864
+non_inv                           -7.97332e-05
+x1.14                                 -0.59387
+x1.9                                         0
+x1.8                                0.00297342
+x                                  0.000903305
+h.x1.hlim#branch                  -5.70104e-15
+v.x1.vlim#branch                   2.85018e-06
+v.x1.vln#branch                   -4.00064e-11
+v.x1.vlp#branch                   -3.99979e-11
+v.x1.ve#branch                     4.00407e-12
+v.x1.vc#branch                     3.99797e-12
+v.x1.vb#branch                    -3.08482e-12
+vin#branch                         2.83091e-06
+vee#branch                         0.000565821
+vcc#branch                        -0.000565615
+a$poly$e.x1.egnd#branch_1_0       -2.89626e-06
+
+
+
+No. of Data Rows : 1009
+********************************************
+Frequency analysis
+********************************************
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+
+No. of Data Rows : 71
+zo = 6.817195e-01,-4.66750e-01
+modulus = 8.261941e-01
+phase = -3.43981e+01
+outimp_TAB
+Output impedance = 0.681719 + j*-0.46675 kOhm
+Output impedance modulus = 0.826194 kOhm
+Output impedance phase = -34.3981 degrees
+outimp_END
+ngspice-26 done
